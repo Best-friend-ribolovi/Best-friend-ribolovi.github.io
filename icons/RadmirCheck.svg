@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.3.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-width:2;}
+	.st1{fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+	.st2{fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;}
+	.st3{fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;}
+</style>
+<g id="Слой_1">
+	<circle class="st0" cx="12" cy="7" r="5"/>
+	<path class="st1" d="M17,22H5.3c-1.2,0-2.1-1.1-2-2.2l0.4-3.1c0.2-1.5,1.5-2.6,3-2.6H7"/>
+	<path class="st1" d="M5.1,22h13.7c1.4,0,2.5-1.1,2.3-2.2l-0.5-3.1c-0.2-1.5-1.7-2.6-3.5-2.6h-0.4"/>
+</g>
+<g id="Слой_2">
+	<path class="st2" d="M9.2,7.4c0.6,1.1,1.7,1.8,2.9,1.7c1.1-0.1,2.1-0.8,2.5-1.8"/>
+	<circle class="st3" cx="10.1" cy="5.4" r="0.5"/>
+	<circle class="st3" cx="13.4" cy="5.4" r="0.5"/>
+</g>
+</svg>
