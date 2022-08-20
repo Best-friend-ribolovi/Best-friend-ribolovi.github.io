@@ -60,7 +60,7 @@ window.addEventListener('DOMContentLoaded', function(){
         
     maksim.parentElement.addEventListener('click', ()=>{
        
-        if(maksim.style.background = "url('./icons/MaksimCheck.svg') center/cover"){
+        if(maksim.style.background == "url('./icons/MaksimCheck.svg') center/cover"){
             maksim.style.background = "url('./icons/Maksim.svg') center/cover";
         }
         else{ maksim.style.background = "url('./icons/MaksimCheck.svg') center/cover";}
