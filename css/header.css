@@ -27,7 +27,14 @@ header{
     padding: 0;
 }
 
-
+.icon-one{
+    display: none;
+}
+@media(max-width:600px){
+    .icon-one{
+        display: block;
+    }
+}
 .hamburger {
     top:50%;
     left:10%;
@@ -68,7 +75,7 @@ header{
 
 .icon-one.active-one .hamburger-one {
     background:rgba(0,0,0,0);
-    box-shadow: 0 2px 5px rgb(28 28 36);
+    box-shadow: 0 2px 5px rgb(28 28 36 / 0%);
 }
 
 .icon-one.active-one .hamburger-one:before {
