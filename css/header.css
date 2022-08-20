@@ -27,16 +27,73 @@ header{
     padding: 0;
 }
 
+
+.hamburger {
+    top:50%;
+    left:10%;
+    width: 50px;
+    height: 6px;
+    background: #FCFCFC;
+    position: absolute;
+    box-shadow: 0 2px 5px rgb(28 28 36);
+    transition: 0.5s;
+}
+
+.hamburger:before {
+    top: -16px;
+}
+
+.hamburger:after {
+    top: 16px;
+}
+.icon-one {
+    position: fixed;
+    top: 0;
+    right: 0px;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.hamburger-one:before, .hamburger-one:after {
+    content: '';
+    position:absolute;
+    width: 50px;
+    height: 6px;
+    background:#FCFCFC;
+    box-shadow: 0 2px 5px rgb(28 28 36);
+    transition:0.5s;
+}
+
+.icon-one.active-one .hamburger-one {
+    background:rgba(0,0,0,0);
+    box-shadow: 0 2px 5px rgb(28 28 36);
+}
+
+.icon-one.active-one .hamburger-one:before {
+    top: 0;
+    transform:rotate(45deg);
+}
+
+.icon-one.active-one .hamburger-one:after {
+    top: 0;
+    transform:rotate(135deg);
+    box-shadow: 0 -2px 5px rgb(28 28 36);
+}
+
+
 /*Адаптив*/
 @media (max-width:600px){
     .menu{
         position: fixed;
         right: -100%;
+        top: 0;
         height: 100vh;
         width: 100vw;
-        z-index: 100;
+        z-index: 99;
         background: #000000e6;
-        transition: 1s all;
+        transition: .5s all;
     }
     .menu.active{
         right: 0;
@@ -49,5 +106,19 @@ header{
     }
     .menu__list_li {
         margin: 0 auto;
+    }
+}
+@media (max-width:540px){
+    header, .calc, .table, .album {
+        padding-top: 15px;
+    }
+    .icon-one {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .hamburger,.hamburger-one:before, .hamburger-one:after{
+        width: 45px;
+        height: 6px;
     }
 }

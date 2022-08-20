@@ -54,5 +54,11 @@ window.addEventListener('DOMContentLoaded', function(){
             }
         });
     
-    
+
+    let radmir = document.querySelector('.calc__block_persone-radmir'),
+        maksim = document.querySelector('.calc__block_persone-maksim');
+        
+    maksim.parentElement.addEventListener('click', ()=>{
+        maksim.style.background = "url('./icons/MaksimCheck.svg') center/cover";
+    });
 });

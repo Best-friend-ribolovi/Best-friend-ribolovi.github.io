@@ -15,3 +15,8 @@ h3.element-animation.element-show{
 .text.element-animation.element-show{
   transition: 0.1s all;
 }
+@media(max-width:540px){
+  .element-animation {
+    margin: 0 0 15px 0;    
+  }
+}

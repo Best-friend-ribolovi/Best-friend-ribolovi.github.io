@@ -35,12 +35,14 @@
 .calc__block_persones{
     display: flex;
     justify-content: space-between;
-    margin: 0px 180px;
+    margin: 0px auto;
+    max-width: 290px;
 }
 .calc__block_persone{
     width: 60px;
     height: 60px;
     background: url('../icons/Persone.svg') center/cover;
+    transition: .2s all;
 }
 .calc__block_persone:hover{
     cursor: pointer;
@@ -49,11 +51,13 @@
     background: url('../icons/Maksim.svg') center/cover;
     height: 80px;
     width: 90px;
+    transition: .2s all;
 }
 .calc__block_persone-radmir{
     background: url('../icons/Radmir.svg') center/cover;
     height: 80px;
     width: 80px;
+    transition: .2s all;
 }
 .calc__block_persone-individual{
     margin: 10px 50px;
@@ -65,8 +69,40 @@
 
 /*Адаптив*/
 @media(max-width: 540px){
+    .calc__blocks {
+        height: calc(100% - 29.6px);
+    }
     .calc__block_persones {
         flex-wrap: wrap;
         margin: 0 20px;
+    }
+    .calc__block_persone {
+        width: 50px;
+        height: 50px;
+    }
+    .calc__block_persone-individual {
+        margin: 5px auto;
+        flex-direction: column;
+        text-align: center;
+    }
+    .calc__block_persone-maksim{
+        height: 50px;
+        width: 60px;    
+    }
+    .calc__block_persone-radmir {
+        height: 50px;
+        width: 40px;
+    }
+}
+@media(max-width: 400px){
+    .calc__block_persone {
+        width: 45px;
+        height: 45px;
+    }
+}
+@media(max-width: 340px){
+    .calc__block_persone {
+        width: 55px;
+        height: 55px;
     }
 }
