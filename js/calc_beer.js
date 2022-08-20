@@ -59,9 +59,17 @@ window.addEventListener('DOMContentLoaded', function(){
         maksim = document.querySelector('.calc__block_persone-maksim');
         
     maksim.parentElement.addEventListener('click', ()=>{
-        maksim.style.background = "url('./icons/MaksimCheck.svg') center/cover";
+       
+        if(maksim.style.background = "url('./icons/MaksimCheck.svg') center/cover"){
+            maksim.style.background = "url('./icons/Maksim.svg') center/cover";
+        }
+        else{ maksim.style.background = "url('./icons/MaksimCheck.svg') center/cover";}
     });
     radmir.parentElement.addEventListener('click', ()=>{
-        radmir.style.background = "url('./icons/RadmirCheck.svg') center/cover";
+        if(radmir.style.background == "url('./icons/RadmirCheck.svg') center/cover"){
+            radmir.style.background = "url('./icons/Radmir.svg') center/cover";
+        }
+        else{radmir.style.background = "url('./icons/RadmirCheck.svg') center/cover";}
+        
     });
 });
