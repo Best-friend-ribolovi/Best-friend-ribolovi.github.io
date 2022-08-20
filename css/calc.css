@@ -1,0 +1,58 @@
+.calc__blocks{
+    display: flex;
+    height: calc(100% - 59.6px);
+}
+.calc__block{
+    width: 50%;
+}
+.calc__block:first-child{
+    background-color: #FFB700;
+}
+.calc__block:last-child{
+    background-color: #9BED00;
+}
+.calc__block_text{
+    margin-top: 10px;
+    transition: .5s all;
+}
+.calc__block_title{
+    text-align: center;
+}
+.calc__block:hover .element-animation.element-show{
+    transition: .5s all;
+}
+.calc__block_descr{
+    padding: 5px 20px;
+}
+.calc__block_descr .element-animation.element-show{
+    margin-bottom: 10px;
+}
+.calc__block_persones{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 50px;
+}
+.calc__block_persone{
+    width: 60px;
+    height: 60px;
+    background: url('../icons/Persone.svg') center/cover;
+}
+.calc__block_persone:hover{
+    cursor: pointer;
+}
+.calc__block_persone-maksim{
+    background: url('../icons/Maksim.svg') center/cover;
+    height: 80px;
+    width: 90px;
+}
+.calc__block_persone-radmir{
+    background: url('../icons/Radmir.svg') center/cover;
+    height: 80px;
+    width: 80px;
+}
+.calc__block_persone-individual{
+    margin: 10px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
