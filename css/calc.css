@@ -2,14 +2,19 @@
     display: flex;
     height: calc(100% - 59.6px);
 }
+.calc__block_descr .text{
+    display: flex;
+    justify-content: center;
+}
+
 .calc__block{
     width: 50%;
 }
 .calc__block:first-child{
-    background-color: #FFB700;
+    background-color: #f0b97696;
 }
 .calc__block:last-child{
-    background-color: #9BED00;
+    background-color: #92a5c585;
 }
 .calc__block_text{
     margin-top: 10px;
@@ -30,7 +35,7 @@
 .calc__block_persones{
     display: flex;
     justify-content: space-between;
-    margin: 0 50px;
+    margin: 0px 180px;
 }
 .calc__block_persone{
     width: 60px;
@@ -55,4 +60,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+
+/*Адаптив*/
+@media(max-width: 540px){
+    .calc__block_persones {
+        flex-wrap: wrap;
+        margin: 0 20px;
+    }
 }

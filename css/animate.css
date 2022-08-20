@@ -9,3 +9,9 @@ opacity: 1;
 transition: all 1.5s;
 transform: translateY(0%);
 }
+h3.element-animation.element-show{
+  margin-bottom: 10px;
+}
+.text.element-animation.element-show{
+  transition: 0.1s all;
+}

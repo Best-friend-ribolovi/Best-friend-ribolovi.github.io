@@ -16,10 +16,7 @@ window.addEventListener('DOMContentLoaded', function(){
                         break;
                     }
                 }
-                for(let i = persone.length-1; i > 0; i--){
-                    let j = i+1;
-                    console.log("Блок убывания:");
-                    console.log(persone[i]);
+                for(let i = persone.length-1; i >= 0; i--){
                     if (i == persone.length-1){}
                     else{persone[i+1].style.background = "url('./icons/Persone.svg') center/cover";}
                     if (target == persone[i]){ break;}
