@@ -51,13 +51,13 @@
     background: url('../icons/Maksim.svg') center/cover;
     height: 80px;
     width: 90px;
-    transition: .2s all;
+    transition: .35s all;
 }
 .calc__block_persone-radmir{
     background: url('../icons/Radmir.svg') center/cover;
     height: 80px;
     width: 80px;
-    transition: .2s all;
+    transition: .35s all;
 }
 .calc__block_persone-individual{
     margin: 10px 50px;

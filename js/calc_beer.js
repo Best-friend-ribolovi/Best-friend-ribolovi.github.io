@@ -62,6 +62,6 @@ window.addEventListener('DOMContentLoaded', function(){
         maksim.style.background = "url('./icons/MaksimCheck.svg') center/cover";
     });
     radmir.parentElement.addEventListener('click', ()=>{
-        maksim.style.background = "url('./icons/RadmirCheck.svg') center/cover";
+        radmir.style.background = "url('./icons/RadmirCheck.svg') center/cover";
     });
 });
