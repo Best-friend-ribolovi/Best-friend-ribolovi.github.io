@@ -88,7 +88,7 @@ window.addEventListener('DOMContentLoaded', function(){
     
     calc__beer_btn.addEventListener('click', ()=>{
         console.log(persone[0]);
-        if(personeNumber == 0 && persone[0].style.background == ""){
+        if(personeNumber == 0 && persone[0].style.background == "" && maksimText.textContent == "Естественно Максим пьет" && radmirText.textContent == "Радмир будет с нами пить и компания очень этому рада"){
             calc__beer_result.innerHTML = `Выберите параметры, товарищ! Не ломайте сайт!`
         }
         else{
