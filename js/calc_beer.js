@@ -80,7 +80,7 @@ window.addEventListener('DOMContentLoaded', function(){
         input__calc.value = 0;
     input__calc.addEventListener('change', ()=>{
         if(input__calc.value == 0){input__calc_text.innerHTML = 'Выпить, чтобы культурно посидеть';}
-        else{input__calc_text.innerHTML = 'Выпить, чтобы нахуяриться';}
+        else{input__calc_text.innerHTML = 'Выпить, чтобы забыть о пустых ходок за рыбой';}
     });
 
     let calc__beer_btn = document.querySelector('.calc__beer_btn'),
@@ -100,7 +100,7 @@ window.addEventListener('DOMContentLoaded', function(){
             if(maksimText.textContent == "Естественно Максим пьет"){point += 3;}
             if(radmirText.textContent == "Радмир будет с нами пить и компания очень этому рада"){point += 2;}
             if(point>5){litr = 'ов';}else if(point==1){point = '';}
-            calc__beer_result.innerHTML = `Вам нужно купить ${point} литр${litr} пива для приятного времяпровождения!`;
+            calc__beer_result.innerHTML = `Вам нужно купить ${point} литр${litr} пива для того, чтобы забыть печаль!`;
         }
     });
 });
