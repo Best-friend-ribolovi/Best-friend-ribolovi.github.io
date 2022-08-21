@@ -48,13 +48,13 @@
     cursor: pointer;
 }
 .calc__block_persone-maksim{
-    background: url('../icons/Maksim.svg') center/cover;
+    background: url("./icons/Maksim.svg") center center / cover;
     height: 80px;
     width: 90px;
     transition: .35s all;
 }
 .calc__block_persone-radmir{
-    background: url('../icons/Radmir.svg') center/cover;
+    background: url('./icons/Radmir.svg') center / cover;
     height: 80px;
     width: 80px;
     transition: .35s all;
