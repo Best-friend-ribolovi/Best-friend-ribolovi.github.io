@@ -87,20 +87,26 @@ window.addEventListener('DOMContentLoaded', function(){
         calc__beer_result = document.querySelector('.calc__beer_result');
     
     calc__beer_btn.addEventListener('click', ()=>{
-        let litr = 'а';
-        if(input__calc.value == 0){
-            let point = ((personeNumber+1)*1.5);
-            if(maksimText.textContent == "Естественно Максим пьет"){point += 2;}
-            if(radmirText.textContent == "Радмир будет с нами пить и компания очень этому рада"){point += 1;}
-            if(point>5){litr = 'ов';}else if(point==1){point = '';}
-            calc__beer_result.innerHTML = `Вам нужно купить ${point} литр${litr} пива для приятного времяпровождения!`;
+        console.log(persone[0]);
+        if(personeNumber == 0 && persone[0].style.background == ""){
+            calc__beer_result.innerHTML = `Выберите параметры, товарищ! Не ломайте сайт!`
         }
         else{
-            let point = ((personeNumber+1)*2.5);
-            if(maksimText.textContent == "Естественно Максим пьет"){point += 3;}
-            if(radmirText.textContent == "Радмир будет с нами пить и компания очень этому рада"){point += 2;}
-            if(point>5){litr = 'ов';}else if(point==1){point = '';}
-            calc__beer_result.innerHTML = `Вам нужно купить ${point} литр${litr} пива для того, чтобы забыть печаль!`;
+            let litr = 'а';
+            if(input__calc.value == 0){
+                let point = ((personeNumber+1)*1.5);
+                if(maksimText.textContent == "Естественно Максим пьет"){point += 2;}
+                if(radmirText.textContent == "Радмир будет с нами пить и компания очень этому рада"){point += 1;}
+                if(point>5){litr = 'ов';}else if(point==1){point = '';}
+                calc__beer_result.innerHTML = `Вам нужно купить ${point} литр${litr} пива для приятного времяпровождения!`;
+            }
+            else{
+                let point = ((personeNumber+1)*2.5);
+                if(maksimText.textContent == "Естественно Максим пьет"){point += 3;}
+                if(radmirText.textContent == "Радмир будет с нами пить и компания очень этому рада"){point += 2;}
+                if(point>5){litr = 'ов';}else if(point==1){point = '';}
+                calc__beer_result.innerHTML = `Вам нужно купить ${point} литр${litr} пива для того, чтобы забыть печаль!`;
+            }
         }
     });
 });
