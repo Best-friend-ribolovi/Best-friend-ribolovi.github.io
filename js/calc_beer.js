@@ -88,13 +88,14 @@ window.addEventListener('DOMContentLoaded', function(){
     
     calc__beer_btn.addEventListener('click', ()=>{
         console.log(persone[0]);
-        if(personeNumber == 0 && persone[0].style.background == "" && maksimText.textContent == "Естественно Максим пьет" && radmirText.textContent == "Радмир будет с нами пить и компания очень этому рада"){
+        if((personeNumber == 0 && persone[0].style.background == "") && maksimText.textContent != "Естественно Максим пьет" && radmirText.textContent != "Радмир будет с нами пить и компания очень этому рада"){
             calc__beer_result.innerHTML = `Выберите параметры, товарищ! Не ломайте сайт!`
         }
         else{
             let litr = 'а';
             if(input__calc.value == 0){
-                let point = ((personeNumber+1)*1.5);
+                if(personeNumber == 0 && persone[0].style.background == ""){let point = 0;}
+                else{let point = ((personeNumber+1)*1.5);}
                 if(maksimText.textContent == "Естественно Максим пьет"){point += 2;}
                 if(radmirText.textContent == "Радмир будет с нами пить и компания очень этому рада"){point += 1;}
                 if(point>5){litr = 'ов';}else if(point==1){point = '';}
