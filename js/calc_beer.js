@@ -94,11 +94,12 @@ window.addEventListener('DOMContentLoaded', function(){
         else{
             let litr = 'а';
             if(input__calc.value == 0){
-                if(personeNumber == 0 && persone[0].style.background == ""){let point = 0;}
-                else{let point = ((personeNumber+1)*1.5);}
+                let point = 0;
+                if(personeNumber == 0 && persone[0].style.background == ""){point = 0;}
+                else{point = ((personeNumber+1)*1.5);}
                 if(maksimText.textContent == "Естественно Максим пьет"){point += 2;}
                 if(radmirText.textContent == "Радмир будет с нами пить и компания очень этому рада"){point += 1;}
-                if(point>5){litr = 'ов';}else if(point==1){point = '';}
+                if(point>5){litr = 'ов';}else if(point==1){litr = '';}
                 calc__beer_result.innerHTML = `Вам нужно купить ${point} литр${litr} пива для приятного времяпровождения!`;
             }
             else{
