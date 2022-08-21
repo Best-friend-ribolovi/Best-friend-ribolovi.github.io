@@ -9,6 +9,7 @@
 
 .calc__block{
     width: 50%;
+    padding: 0 20px;
 }
 .calc__block:first-child{
     background-color: #f0b97696;
@@ -60,21 +61,74 @@
     transition: .35s all;
 }
 .calc__block_persone-individual{
-    margin: 10px 50px;
+    margin: 10px 20px 10px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    cursor: pointer;
 }
-
-
+.calc__block_persone-individual.radmir.text{
+    max-width: 190px;
+}
+.calc__beer_range{
+    margin-top: 20px;
+    margin: 0 auto;
+    width: fit-content;
+}
+.calc__beer_range .text{
+    text-align: center;
+}
+.input__calc{
+    width: 290px;
+    cursor: pointer;
+}
+.calc__block_text{
+    margin-bottom: 20px;
+}
+.calc__beer_btn{
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    background-color: #0075ff;
+    width: 50%;
+    margin: 20px auto;
+    border-radius: 40px;
+    cursor: pointer;
+    color: white;
+}
 /*Адаптив*/
-@media(max-width: 540px){
+@media(max-width:700px){
+    .input__calc {
+        width: 100%;
+    }
+}
+@media(max-width: 700px){
+    .calc {
+        height: auto;
+    }
+    .calc__beer_result{
+        text-align: center;
+        margin-bottom: 20px;
+    }
     .calc__blocks {
         height: calc(100% - 29.6px);
+        flex-direction: column;
+    }
+    .calc__block{
+        width: 100%;
     }
     .calc__block_persones {
         flex-wrap: wrap;
-        margin: 0 20px;
+        margin: 0 auto 15px;
+        width: 100%;
+        max-width: none;
+        max-width: 370px;
+    }
+    .calc__block_descr .text {
+        text-align: center;
+    }
+    .calc__beer_btn {
+        margin: 15px auto;
     }
     .calc__block_persone {
         width: 50px;
@@ -92,6 +146,9 @@
     .calc__block_persone-radmir {
         height: 50px;
         width: 40px;
+    }
+    .calc__block_text {
+        margin-bottom: 5px;
     }
 }
 @media(max-width: 400px){
