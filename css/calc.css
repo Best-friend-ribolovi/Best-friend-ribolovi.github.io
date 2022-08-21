@@ -96,6 +96,9 @@
     cursor: pointer;
     color: white;
 }
+.calc__beer_result{
+    text-align: center;
+}
 /*Адаптив*/
 @media(max-width:700px){
     .input__calc {
