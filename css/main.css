@@ -13,7 +13,7 @@ body{
 h3{
     font-size: 18px;
 }
-header, .calc, .table{
+header, .table{
     height: 100vh;
     padding-top: 30px;
 }
