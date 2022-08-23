@@ -28,9 +28,16 @@ window.addEventListener('DOMContentLoaded', function(){
                 if (target && target.classList.contains('calc__block_persone')){
                     for(let i = 0; i < persone.length; i++){
                         if (target == persone[i]){
-                            personeNumber=i;
-                            console.log(`personeNumber = ${personeNumber}`)
-                            break;
+                            if(personeNumber == i){
+                                for(let j = 0; j < persone.length; j++){
+                                    persone[j].style.background = "url('./icons/Persone.svg') center/cover";
+                                }
+                            }
+                            else{
+                                personeNumber=i;
+                                console.log(`personeNumber = ${personeNumber}`)
+                                break;
+                            }
                         }
                     }
                 }
@@ -39,18 +46,27 @@ window.addEventListener('DOMContentLoaded', function(){
             let target = event.target;
             console.log(target);         
             if (target && target.classList.contains('calc__block_persone')){
-                if (personeNumber!=1){
-                    for(let i = persone.length-1; i > personeNumber; i--){
-                        persone[i].style.background = "url('./icons/Persone.svg') center/cover";
+                for(let i = 0; i <= personeNumber; i++){
+                    persone[i].style.background = "url('./icons/PersoneCheck.svg') center/cover";
+                }
+                for(let i = persone.length-1; i > personeNumber; i--){
+                    persone[i].style.background = "url('./icons/Persone.svg') center/cover";
+                    if(i == 1 && personeNumber ==0){
+                        persone[0].style.background = "url('./icons/Persone.svg') center/cover";
                     }
                 }
-                else{
-                    for(let i = 0; i < persone.length; i++){
-                        if (personeNumber==0){
-                            persone[i].style.background = "url('./icons/Persone.svg') center/cover";
-                        }
-                    }
-                }
+                // if (personeNumber!=0){
+                //     for(let i = persone.length-1; i > personeNumber; i--){
+                //         persone[i].style.background = "url('./icons/Persone.svg') center/cover";
+                //     }
+                // }
+                // else{
+                //     if (personeNumber==0){
+                //         for(let i = 0; i < persone.length; i++){
+                //             persone[i].style.background = "url('./icons/Persone.svg') center/cover";
+                //         }
+                //     }
+                // }
             }
         });
     
@@ -88,27 +104,26 @@ window.addEventListener('DOMContentLoaded', function(){
     
     calc__beer_btn.addEventListener('click', ()=>{
         console.log(persone[0]);
-        if((personeNumber == 0 && persone[0].style.background == "") && maksimText.textContent != "Естественно Максим пьет" && radmirText.textContent != "Радмир будет с нами пить и компания очень этому рада"){
+        if((personeNumber == 0 && (persone[0].style.background == "" || persone[0].style.background == "url('./icons/Persone.svg') center/cover")) && maksimText.textContent != "Естественно Максим пьет" && radmirText.textContent != "Радмир будет с нами пить и компания очень этому рада"){
             calc__beer_result.innerHTML = `Выберите параметры, товарищ! Не ломайте сайт!`
         }
         else{
-            let litr = 'а';
             if(input__calc.value == 0){
-                let point = 0;
-                if(personeNumber == 0 && persone[0].style.background == ""){point = 0;}
-                else{point = ((personeNumber+1)*1.5);}
-                if(maksimText.textContent == "Естественно Максим пьет"){point += 2;}
-                if(radmirText.textContent == "Радмир будет с нами пить и компания очень этому рада"){point += 1;}
-                if(point>5){litr = 'ов';}else if(point==1){litr = '';}
-                calc__beer_result.innerHTML = `Вам нужно купить ${point} литр${litr} пива для приятного времяпровождения!`;
+                final(persone, 1.5, 2, 1);
             }
             else{
-                let point = ((personeNumber+1)*2.5);
-                if(maksimText.textContent == "Естественно Максим пьет"){point += 3;}
-                if(radmirText.textContent == "Радмир будет с нами пить и компания очень этому рада"){point += 2;}
-                if(point>5){litr = 'ов';}else if(point==1){point = '';}
-                calc__beer_result.innerHTML = `Вам нужно купить ${point} литр${litr} пива для того, чтобы забыть печаль!`;
+                final(persone, 2.5, 3, 2);
             }
         }
     });
+    function final(persone,personeChislo, maksim, radmir){
+        let point = 0;
+        let litr = 'а';
+        if(personeNumber == 0 && (persone[0].style.background == "" || persone[0].style.background == "url('./icons/Persone.svg') center/cover")){point = 0;}
+        else{point = ((personeNumber+1)*personeChislo);}
+        if(maksimText.textContent == "Естественно Максим пьет"){point += maksim;}
+        if(radmirText.textContent == "Радмир будет с нами пить и компания очень этому рада"){point += radmir;}
+        if(point>5){litr = 'ов';}else if(point==1){litr = '';}
+        calc__beer_result.innerHTML = `Вам нужно купить ${point} литр${litr} пива для того, чтобы забыть печаль!`;
+    }
 });
