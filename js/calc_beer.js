@@ -114,7 +114,7 @@ window.addEventListener('DOMContentLoaded', function(){
     function final(persone,personeChislo, maksim, radmir, check){
         let point = 0;
         let litr = 'а';
-        if((persone[0].style.background == "" || persone[0].style.background == "url('./icons/Persone.svg') center center / cover")){point = 0;}
+        if(persone[0].style.background != 'url("./icons/PersoneCheck.svg") center center / cover'){point = 0;}
         else{point = ((personeNumber+1)*personeChislo);}
         if(maksimText.textContent == "Естественно Максим пьет"){point += maksim;}
         if(radmirText.textContent == "Радмир будет с нами пить и компания очень этому рада"){point += radmir;}
