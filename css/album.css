@@ -1,0 +1,13 @@
+.album__photos{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.album__photos_photo{
+    display: inline-block;
+}
+.album__photos_photo img{
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+}

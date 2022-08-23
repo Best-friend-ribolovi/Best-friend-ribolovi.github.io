@@ -94,15 +94,15 @@ window.addEventListener('DOMContentLoaded', function(){
     
     calc__beer_btn.addEventListener('click', ()=>{
         console.log(persone[0]);
-        if((personeNumber == 0 && (persone[0].style.background == "" || persone[0].style.background == "url('./icons/Persone.svg') center/cover")) && maksimText.textContent != "Естественно Максим пьет" && radmirText.textContent != "Радмир будет с нами пить и компания очень этому рада"){
+        if((persone[0].style.background != 'url("./icons/PersoneCheck.svg") center center / cover') && maksimText.textContent != "Естественно Максим пьет" && radmirText.textContent != "Радмир будет с нами пить и компания очень этому рада"){
             calc__beer_result.innerHTML = `Выберите параметры, товарищ! Не ломайте сайт!`
         }
         else{
             if(input__calc.value == 0){
-                final(persone, 1.5, 2, 1);
+                final(persone, 1.5, 2, 1, 0);
             }
             else{
-                final(persone, 2.5, 3, 2);
+                final(persone, 2.5, 3, 2, 1);
             }
         }
     });
@@ -111,14 +111,19 @@ window.addEventListener('DOMContentLoaded', function(){
 
 
 
-    function final(persone,personeChislo, maksim, radmir){
+    function final(persone,personeChislo, maksim, radmir, check){
         let point = 0;
         let litr = 'а';
-        if(personeNumber == 0 && (persone[0].style.background == "" || persone[0].style.background == "url('./icons/Persone.svg') center/cover")){point = 0;}
+        if((persone[0].style.background == "" || persone[0].style.background == "url('./icons/Persone.svg') center center / cover")){point = 0;}
         else{point = ((personeNumber+1)*personeChislo);}
         if(maksimText.textContent == "Естественно Максим пьет"){point += maksim;}
         if(radmirText.textContent == "Радмир будет с нами пить и компания очень этому рада"){point += radmir;}
         if(point>5){litr = 'ов';}else if(point==1){litr = '';}
-        calc__beer_result.innerHTML = `Вам нужно купить ${point} литр${litr} пива для того, чтобы забыть печаль!`;
+        if(check == 0){
+            calc__beer_result.innerHTML = `Вам нужно купить ${point} литр${litr} пива для того, чтобы приятно посидеть!`;
+        }
+        else{
+            calc__beer_result.innerHTML = `Вам нужно купить ${point} литр${litr} пива для того, чтобы забыть печаль!`;
+        }
     }
 });
