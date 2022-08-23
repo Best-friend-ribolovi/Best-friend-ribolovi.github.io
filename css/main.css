@@ -1,8 +1,11 @@
-@import "normalize.css";
-@import "animate.css";
-@import "calc.css";
-@import "footer.css";
-@import "header.css";
+@import "../css/bootstrap.min.css";
+@import "../css/normalize.css";
+@import "../css/animate.css";
+@import "../css/calc_beer.css";
+@import "../css/calc_money.css";
+@import "../css/footer.css";
+@import "../css/header.css";
+@import "../css/galerey.css";
 body{
     font-size: 15px;
 }

@@ -83,7 +83,6 @@ window.addEventListener('DOMContentLoaded', function(){
     
     let input__calc = document.querySelector('.input__calc'),
         input__calc_text = document.querySelector('.calc__beer_range .text');
-        console.log(input__calc.value);
         input__calc.value = 0;
     input__calc.addEventListener('change', ()=>{
         if(input__calc.value == 0){input__calc_text.innerHTML = 'Выпить, чтобы культурно посидеть';}
@@ -111,7 +110,7 @@ window.addEventListener('DOMContentLoaded', function(){
 
 
 
-    
+
     function final(persone,personeChislo, maksim, radmir){
         let point = 0;
         let litr = 'а';
