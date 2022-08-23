@@ -2,17 +2,13 @@ window.addEventListener('DOMContentLoaded', function(){
     'use strict';
     let persone = document.querySelectorAll('.calc__block_persone'),
         persones = document.querySelector('.calc__block_persones');
-    console.log(persone);
-    console.log(persones);
-        let personeNumber = 0;
+        let personeNumber = 0, flag = 0;
         persones.addEventListener('mouseover', (event)=>{
             let target = event.target;
-            console.log(target);
             if (target && target.classList.contains('calc__block_persone')){
                 for(let i = 0; i < persone.length; i++){
                     persone[i].style.background = "url('./icons/PersoneCheck.svg') center/cover";
                     if (target == persone[i]){
-                        console.log(persone[i]);
                         break;
                     }
                 }
@@ -29,14 +25,25 @@ window.addEventListener('DOMContentLoaded', function(){
                     for(let i = 0; i < persone.length; i++){
                         if (target == persone[i]){
                             if(personeNumber == i){
-                                for(let j = 0; j < persone.length; j++){
-                                    persone[j].style.background = "url('./icons/Persone.svg') center/cover";
+                                if(personeNumber == 0 && flag == 0){
+                                    persone[0].style.background = "url('./icons/PersoneCheck.svg') center/cover";
+                                    flag = 1;
                                 }
+                                else{
+                                    for(let j = 0; j < persone.length; j++){
+                                        personeNumber=0;
+                                        persone[j].style.background = "url('./icons/Persone.svg') center/cover";
+                                        flag = 0;
+                                    }
+                                }  
                             }
                             else{
                                 personeNumber=i;
-                                console.log(`personeNumber = ${personeNumber}`)
+                                flag = 1;
                                 break;
+                            }
+                            if (i==0 && personeNumber == 0 && flag == 1){
+                                persone[0].style.background = "url('./icons/PersoneCheck.svg') center/cover";
                             }
                         }
                     }
@@ -44,29 +51,19 @@ window.addEventListener('DOMContentLoaded', function(){
         });
         persones.addEventListener('mouseout', (event)=>{
             let target = event.target;
-            console.log(target);         
             if (target && target.classList.contains('calc__block_persone')){
                 for(let i = 0; i <= personeNumber; i++){
                     persone[i].style.background = "url('./icons/PersoneCheck.svg') center/cover";
+                    if(flag == 1 && i==0 && personeNumber == 0){
+                        persone[0].style.background = "url('./icons/PersoneCheck.svg') center/cover";
+                    }
                 }
                 for(let i = persone.length-1; i > personeNumber; i--){
                     persone[i].style.background = "url('./icons/Persone.svg') center/cover";
-                    if(i == 1 && personeNumber ==0){
+                    if(personeNumber == 0 && flag == 0){
                         persone[0].style.background = "url('./icons/Persone.svg') center/cover";
                     }
                 }
-                // if (personeNumber!=0){
-                //     for(let i = persone.length-1; i > personeNumber; i--){
-                //         persone[i].style.background = "url('./icons/Persone.svg') center/cover";
-                //     }
-                // }
-                // else{
-                //     if (personeNumber==0){
-                //         for(let i = 0; i < persone.length; i++){
-                //             persone[i].style.background = "url('./icons/Persone.svg') center/cover";
-                //         }
-                //     }
-                // }
             }
         });
     
@@ -76,17 +73,11 @@ window.addEventListener('DOMContentLoaded', function(){
         maksimText = document.querySelector('.calc__block_persone-individual.maksim.text'),
         maksim = document.querySelector('.calc__block_persone-maksim');
     maksim.parentElement.addEventListener('click', ()=>{
-        if(maksim.style.background == 'url("./icons/Maksim.svg") center center / cover'){
-            maksim.style.background = "url('./icons/MaksimCheck.svg') center/cover";
-            maksimText.innerHTML = 'Естественно Максим пьет';
-        }
+        if(maksim.style.background == 'url("./icons/Maksim.svg") center center / cover'){maksim.style.background = "url('./icons/MaksimCheck.svg') center/cover";maksimText.innerHTML = 'Естественно Максим пьет';}
         else{ maksim.style.background = "url('./icons/Maksim.svg') center/cover";console.log(maksim.style.background);maksimText.innerHTML = 'Максим не пьет';}
     });
     radmir.parentElement.addEventListener('click', ()=>{
-        if(radmir.style.background == 'url("./icons/Radmir.svg") center center / cover'){
-            radmir.style.background = "url('./icons/RadmirCheck.svg') center/cover";
-            radmirText.innerHTML = 'Радмир будет с нами пить и компания очень этому рада';
-        }
+        if(radmir.style.background == 'url("./icons/Radmir.svg") center center / cover'){radmir.style.background = "url('./icons/RadmirCheck.svg') center/cover";radmirText.innerHTML = 'Радмир будет с нами пить и компания очень этому рада';}
         else{radmir.style.background = "url('./icons/Radmir.svg') center/cover";radmirText.innerHTML = 'Радмир не будет пить';}
     });
     
@@ -116,6 +107,11 @@ window.addEventListener('DOMContentLoaded', function(){
             }
         }
     });
+
+
+
+
+    
     function final(persone,personeChislo, maksim, radmir){
         let point = 0;
         let litr = 'а';
