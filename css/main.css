@@ -14,13 +14,12 @@ h3{
 }
 header, .table{
     height: 100vh;
-    padding-top: 30px;
 }
 header{
     padding-top: 0;
 }
 .container{
-    padding-top: 25px;
+    padding-top: 0;
     padding-bottom: 25px;
 }
 .flex{

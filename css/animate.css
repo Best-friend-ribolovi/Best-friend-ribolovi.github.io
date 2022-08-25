@@ -1,5 +1,5 @@
 .element-animation {
-    margin: 0 0 2rem 0;    
+    margin: 15px 0 15px 0;    
     /* Скроем элемент в начальном состоянии */
     opacity: 0;
     transform: translateY(20px);
