@@ -114,12 +114,3 @@ window.addEventListener('DOMContentLoaded', function(){
         }
     }
 });
-//Предзагрузка
-jQuery.preloadImages = function()
- {
-  for(var i = 0; i < arguments.length; i++)
-  {
-   jQuery("<img>").attr("src", arguments[ i ]);
-  }
- };
-$.preloadImages("../icons/PersoneCheck.svg", "../icons/MaksimCheck.svg", "../icons/RadmirCheck.svg");

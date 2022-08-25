@@ -11,3 +11,12 @@ hamburger.addEventListener("click", ()=>{
         menu.classList.add('active');
     }
 });
+//Предзагрузка
+jQuery.preloadImages = function()
+ {
+  for(var i = 0; i < arguments.length; i++)
+  {
+   jQuery("<img>").attr("src", arguments[ i ]);
+  }
+ };
+$.preloadImages("../img/bg.webp", "../img/footer.webp", "../icons/PersoneCheck.svg", "../icons/MaksimCheck.svg", "../icons/RadmirCheck.svg");
