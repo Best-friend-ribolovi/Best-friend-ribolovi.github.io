@@ -1,0 +1,35 @@
+.calc__money{
+    padding: 0 20px;
+}
+.calc__money_inputs{
+    display: flex;
+    justify-content: space-between;
+}
+.calc__money input{
+    width: 48%;
+}
+.calc__money_persone{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+.calc__money_result{
+    margin: 15px 0;
+}
+
+/*Adaptive*/
+@media(max-width: 1000px){
+    .calc__money_inputs{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .calc__money input{
+        width: 80%;
+        margin: 3px 0;
+    }
+}
+@media(max-width: 420px){
+    .calc__money input{
+        width: 100%;
+    }
+}

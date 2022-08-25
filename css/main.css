@@ -24,6 +24,31 @@ header{
     padding-top: 25px;
     padding-bottom: 25px;
 }
+.flex{
+    display: flex;
+}
+.horror{
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 10000;
+    height: 100vh;
+    width: 100vw;
+    background: black;
+    color: white;
+    opacity: 1;
+    transition: 2s all;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.horror.disable{
+    opacity: 0;
+}
+.horror.disable.displaynone{
+    opacity: 0;
+}
 @media (max-width:540px){
     body{
         font-size: 13px;

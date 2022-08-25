@@ -25,7 +25,7 @@
     padding: 24px 0;
     color: #fff;
     white-space: nowrap;
-    animation: marquee 6s infinite linear; /* notice the infinite */
+    animation: marquee 3s infinite linear; /* notice the infinite */
 }
 .marquee:after{
     content: 'Ловить рыбу - Кушать водочку - Пить пиво - Поклева нет - ';

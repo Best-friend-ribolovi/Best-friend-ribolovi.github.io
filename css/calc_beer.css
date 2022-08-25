@@ -42,7 +42,6 @@
 .calc__block_persone{
     width: 60px;
     height: 60px;
-    background: url('../icons/Persone.svg') center/cover;
     transition: .2s all;
 }
 .calc__block_persone:hover{
@@ -85,9 +84,9 @@
     display: block;
 }
 .calc__block_text{
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
-.calc__beer_btn{
+.calc__beer_btn, .buton{
     display: flex;
     justify-content: center;
     padding: 15px;
