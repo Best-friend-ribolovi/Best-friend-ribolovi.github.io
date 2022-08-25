@@ -7,7 +7,7 @@ window.addEventListener('DOMContentLoaded', function(){
     name.addEventListener('change', ()=>{
         console.log(money);
         money.placeholder = `Введите сколько ${name.value} скинулся`;
-        if(name.value == 'Максим' || 'Макс' || 'Максон' || 'Max' || 'максим' || 'макс' || 'максон' || 'max'){
+        if(name.value == 'Максим' || name.value == 'Макс' || name.value == 'Максон' || name.value == 'Max' || name.value == 'максим' || name.value == 'макс' || name.value == 'максон' || name.value == 'max'){
             document.querySelector('body').innerHTML += '<div class="horror"><div>Введи какой Максим...</div></div>';
             setTimeout(() => {
                 document.querySelector('.horror').classList.add('disable');
