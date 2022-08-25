@@ -110,19 +110,36 @@
             <div class="album__photos">
             </div>
             <script>
+                create__photos();
                 window.addEventListener('DOMContentLoaded', function(){
+                    lazy__photos();
+                });
+                function create__photos(){
                     let album = document.querySelector('.album__photos');
                     for(let i=1;i<=22;i++){
-                        let img = new Image;
-                        img.onload = function() {
-                            if(this.width>this.height){$(function(){$('.lazy').Lazy();});
-                                album.innerHTML +=`<div class="album__photos_photo col-lg-6 col-md-8 col-12 p-2"><img class="lazy" data-src="./img/galerey/${i}.jpg" alt=""></div>`;
-                            }
-                            else{$(function(){$('.lazy').Lazy();});album.innerHTML +=`<div class="album__photos_photo col-lg-3 col-md-4 col-12 p-2"><img class="lazy" data-src="./img/galerey/${i}.jpg" alt=""></div>`;}
-                        }
-                        img.src = `img/galerey/${i}.jpg`;
+                        album.innerHTML +=`<div class="album__photos_photo col-lg-3 col-md-4 col-12 p-2"><img class="album__photos_photo-lazy lazy" data-src="./img/galerey/${i}.jpg" alt=""></div>`;
                     }
-                });
+                }
+                function lazy__photos(){
+                    $('.lazy').Lazy({
+                        // your configuration goes here
+                        scrollDirection: 'vertical',
+                        effect: 'fadeIn',
+                        visibleOnly: true,
+                        afterLoad: function(element) {
+                            console.log(element[0].naturalHeight);
+                            if(element[0].naturalWidth>element[0].naturalHeight){
+                                element[0].parentNode.classList.remove('col-lg-3');
+                                element[0].parentNode.classList.add('col-lg-6');
+                                element[0].parentNode.classList.add('col-md-8');
+                                element[0].parentNode.classList.remove('col-md-4');
+                            }
+                        },
+                        onError: function(element) {
+                            console.log('error loading ' + element.data('src'));
+                        }
+                    });
+                }
             </script>
 
         </div>
