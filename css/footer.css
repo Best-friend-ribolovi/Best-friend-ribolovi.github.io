@@ -1,6 +1,6 @@
 footer{
     height: 350px;
-    background: url('../img/footer.jpg') center/cover;
+    background: url('../img/footer.webp') center/cover;
 }
 footer::after{
     content: '';
