@@ -8,13 +8,18 @@ window.addEventListener('DOMContentLoaded', function(){
         console.log(money);
         money.placeholder = `Введите сколько ${name.value} скинулся`;
         if(name.value == 'Максим' || name.value == 'Макс' || name.value == 'Максон' || name.value == 'Max' || name.value == 'максим' || name.value == 'макс' || name.value == 'максон' || name.value == 'max'){
-            document.querySelector('body').innerHTML += '<div class="horror"><div>Введи какой Максим...</div></div>';
+            document.querySelector('.horror').classList.remove('whoosh');
+            document.querySelector('.horror').classList.remove('disable');
+            name.value = '';
+            money.value = '';
+            money.placeholder = `Введите сколько он скинулся`;
             setTimeout(() => {
                 document.querySelector('.horror').classList.add('disable');
+                setTimeout(() => {
+                    document.querySelector('.horror').classList.add('whoosh');
+                }, 500);
             }, 3000);
-            setTimeout(() => {
-                document.querySelector('.horror').remove();
-            }, 4000);
+            
         }
     });
     confirm_btn.addEventListener('click', ()=>{

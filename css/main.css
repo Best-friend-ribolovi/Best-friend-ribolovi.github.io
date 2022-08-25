@@ -37,7 +37,6 @@ header{
     background: black;
     color: white;
     opacity: 1;
-    transition: 2s all;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,9 +44,11 @@ header{
 }
 .horror.disable{
     opacity: 0;
+    transition: .5s all;
 }
-.horror.disable.displaynone{
-    opacity: 0;
+.horror.disable.whoosh{
+    right: 200%;
+    top: 200%;
 }
 @media (max-width:540px){
     body{
