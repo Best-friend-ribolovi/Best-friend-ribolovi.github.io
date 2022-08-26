@@ -9,7 +9,7 @@
 
 .calc__block{
     width: 50%;
-    padding: 0 20px;
+    padding: 0 20px 10px;
 }
 .calc__block:first-child{
     background-color: #f0b97696;
