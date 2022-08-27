@@ -3,6 +3,11 @@ header{
 }
 .menu{
     background: #0000007a;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    width: 100%;
 }
 .menu ul{
     margin: 0 auto;
@@ -85,8 +90,26 @@ header{
     transform:rotate(135deg);
     box-shadow: 0 -2px 5px rgb(28 28 36);
 }
-
-
+.timer-swiper{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 10px;
+    background: white;
+    z-index: 2;
+}
+.timer-swiperAfter{
+    background: #007aff;
+    height: 100%;
+    width: 0;
+    height: 10px;
+    display: block;
+}
+.timer-swiperAfter.active{
+    width: 100%;
+    transition: 5s all;
+}
 /*Адаптив*/
 @media (max-width:600px){
     .menu{

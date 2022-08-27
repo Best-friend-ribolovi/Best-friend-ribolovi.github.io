@@ -7,22 +7,87 @@
     <title>Лучшие друзья-рыболовы</title>
     <link rel="preload" as="style" onload="this.rel='stylesheet'" href="./css/main.css">
     <link rel="preload" as="style" onload="this.rel='stylesheet'" href="./css/bootstrap.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- Demo styles -->
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
 </head>
 <body>
     <script src="./js/jquery.min.js"></script>
     <script src="./js/jquery.lazy.min.js"></script>
     <header>
-        <div class="icon-one">
-            <div class="hamburger hamburger-one"></div>
-        </div>
-        <div class="menu">
-            <ul class="menu__list">
-                <li class="menu__list_li"><a href="">Главная</a></li>
-                <li class="menu__list_li"><a href="#calc">Калькулятор пива</a></li>
-                <li class="menu__list_li"><a href="#table">Турнирная таблица</a></li>
-                <li class="menu__list_li"><a href="#album">Фото-альбом</a></li>
-                <li class="menu__list_li"><a href="#footer">Контакты</a></li>
-            </ul>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./img/bg.webp" alt=""></div>
+                <div class="swiper-slide"><img src="./img/galerey/8.webp" alt=""></div>
+                <div class="swiper-slide"><img src="./img/galerey/9.webp" alt=""></div>
+                <div class="swiper-slide"><img src="./img/galerey/13.webp" alt=""></div>
+                <div class="swiper-slide"><img src="./img/galerey/16.webp" alt=""></div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="menu">
+                <ul class="menu__list">
+                    <li class="menu__list_li"><a href="">Главная</a></li>
+                    <li class="menu__list_li"><a href="#calc">Калькулятор пива</a></li>
+                    <li class="menu__list_li"><a href="#table">Турнирная таблица</a></li>
+                    <li class="menu__list_li"><a href="#album">Фото-альбом</a></li>
+                    <li class="menu__list_li"><a href="#footer">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="icon-one">
+                <div class="hamburger hamburger-one"></div>
+            </div>
+            <div class="timer-swiper"><div class="timer-swiperAfter"></div></div>
         </div>
     </header>
     <main></main>
@@ -151,6 +216,44 @@
     </section>
     <section class="horror disable whoosh">Какой Максим?</section>
     <footer id="footer"></footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        direction: "horizontal",
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        on: {
+            slideChange: ()=> {
+                document.querySelector('.timer-swiperAfter').classList.remove('active');
+                setTimeout(() => {
+                    document.querySelector('.timer-swiperAfter').classList.add('active');
+                }, 50);
+            },
+            init() {
+                this.el.addEventListener('mouseenter', () => {
+                    this.autoplay.stop();
+                    document.querySelector('.timer-swiperAfter').classList.remove('active');  
+                });
+                this.el.addEventListener('mouseleave', () => {
+                    this.autoplay.start();
+                    let count = 0;
+                    document.querySelector('.timer-swiperAfter').classList.add('active');        
+                });
+            }
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true
+        }
+      });
+    </script>
     <script src="./js/main.js"></script>
     <script src="./js/anim.js"></script>
     <script src="./js/jakor.js"></script>
