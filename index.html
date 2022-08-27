@@ -68,11 +68,11 @@
     <header>
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="./img/bg.webp" alt=""></div>
-                <div class="swiper-slide"><img src="./img/galerey/8.webp" alt=""></div>
-                <div class="swiper-slide"><img src="./img/galerey/9.webp" alt=""></div>
-                <div class="swiper-slide"><img src="./img/galerey/13.webp" alt=""></div>
-                <div class="swiper-slide"><img src="./img/galerey/16.webp" alt=""></div>
+                <div class="swiper-slide"><img class="mouseImg" src="./img/bg.webp" alt=""><div class="swiper-slide__text">Лучшие друзья-рыболовы</div></div>
+                <div class="swiper-slide"><img class="mouseImg" src="./img/galerey/8.webp" alt=""><div class="swiper-slide__text">Любим ловить рыбу</div></div>
+                <div class="swiper-slide"><img class="mouseImg" src="./img/galerey/9.webp" alt=""><div class="swiper-slide__text">Чилить</div></div>
+                <div class="swiper-slide"><img class="mouseImg" src="./img/galerey/13.webp" alt=""><div class="swiper-slide__text">Пить пивко</div></div>
+                <div class="swiper-slide"><img class="mouseImg" src="./img/galerey/16.webp" alt=""><div class="swiper-slide__text">Балдеть</div></div>
             </div>
             <div class="swiper-pagination"></div>
             <div class="menu">
@@ -236,17 +236,6 @@
                     document.querySelector('.timer-swiperAfter').classList.add('active');
                 }, 50);
             },
-            init() {
-                this.el.addEventListener('mouseenter', () => {
-                    this.autoplay.stop();
-                    document.querySelector('.timer-swiperAfter').classList.remove('active');  
-                });
-                this.el.addEventListener('mouseleave', () => {
-                    this.autoplay.start();
-                    let count = 0;
-                    document.querySelector('.timer-swiperAfter').classList.add('active');        
-                });
-            }
         },
         pagination: {
           el: ".swiper-pagination",
