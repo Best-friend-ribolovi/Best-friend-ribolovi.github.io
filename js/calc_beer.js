@@ -91,10 +91,10 @@ window.addEventListener('DOMContentLoaded', function(){
         }
         else{
             if(input__calc.value == 0){
-                final(persone, 1.5, 2, 1, 0);
+                final(persone, 1.5, 2, 0.5, 0);
             }
             else{
-                final(persone, 2.5, 3, 2, 1);
+                final(persone, 2.5, 3, 1, 1);
             }
         }
     });
