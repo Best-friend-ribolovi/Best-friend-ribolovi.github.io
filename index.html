@@ -124,13 +124,17 @@
                             <div class="calc__block_persone-radmir" style="background: url('./icons/Radmir.svg') center center / cover;"></div>
                             <div class="calc__block_persone-individual radmir text">Радмир пьет?</div>
                         </div>
+                        <div class="calc__block_persone-individual">
+                            <div class="calc__block_persone-damir" style="background: url('./icons/Damir.svg') center center / cover;"></div>
+                            <div class="calc__block_persone-individual damir text">Дамир пьет???</div>
+                        </div>
                         
                     </div>
                     <div class="calc__beer_range">
                         <div class="text">
                             Выпить, чтобы культурно посидеть
                         </div>
-                        <input class="input__calc" type="range" min="0" max="1">
+                        <input class="input__calc" type="range" min="0" max="4">
                     </div>
                     <div class="calc__beer_btn buton">Подсчитать!</div>
                     <div class="calc__beer_result"></div>
@@ -149,8 +153,8 @@
                     <div class="calc__money">
                         <div class="calc__money_persones"></div>
                         <div class="calc__money_inputs">
-                            <input class="calc__money_name" name="name" type="text" placeholder="Введите имя">
-                            <input class="calc__money_member" name="money" type="text" placeholder="Введите сколько он скинулся">
+                            <input class="calc__money_name" name="name" type="text" placeholder="Введите имя" onkeyup="this.value = this.value.replace(new RegExp('[0-9]'), '');">
+                            <input class="calc__money_member" name="money" type="text" placeholder="Введите сколько он скинулся"  onkeyup="this.value = this.value.replace(/[^\d\.\,]/g, '');">
                         </div>
                         <div class="calc__money_confirm buton">Подтвердить</div>
                         <div class="calc__money_btn buton">Подсчитать!</div>

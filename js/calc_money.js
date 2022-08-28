@@ -24,7 +24,7 @@ window.addEventListener('DOMContentLoaded', function(){
     confirm_btn.addEventListener('click', ()=>{
         let money_persones = document.querySelector('.calc__money_persones');
         if(name.value!='' && money.value!=''){
-            money_persones.innerHTML += `<div class="calc__money_persone"><div class="calc__money_persone-name">${name.value}</div><div class="flex"><div class="calc__money_persone-money">${money.value}</div>₽<div class="persone-delete">X</div></div></div>`;
+            money_persones.innerHTML += `<div class="calc__money_persone"><div class="calc__money_persone-name">${name.value.trimEnd()}</div><div class="flex"><div class="calc__money_persone-money">${money.value.replace(",",".")}</div>₽<div class="persone-delete">X</div></div></div>`;
             name.value = '';
             money.value = '';
             money.placeholder = `Введите сколько он скинулся`;
@@ -67,27 +67,63 @@ window.addEventListener('DOMContentLoaded', function(){
             }
             for(let i=0; i<k;i++){
                 for(let q=0; q<j; q++){
+                    console.log(recipient__name[i].indexOf(' ') >= 0);
+                    if(recipient__name[i].indexOf(' ') > 0){
+                        console.log('2 слова');
+                        let firstWord = recipient__name[i].split(" ")[0],
+                            secondWorld = recipient__name[i].split(" ")[1];
+                        if(firstWord.slice(-1) == 'б'  || firstWord.slice(-1) == 'в' || firstWord.slice(-1) == 'г' || firstWord.slice(-1) == 'д'  || firstWord.slice(-1) == 'ж' || firstWord.slice(-1) == 'з' || firstWord.slice(-1) == 'к'  || firstWord.slice(-1) == 'л' || firstWord.slice(-1) == 'м' || firstWord.slice(-1) == 'н' || firstWord.slice(-1) == 'п' || firstWord.slice(-1) == 'р' || firstWord.slice(-1) == 'с' || firstWord.slice(-1) == 'т' || firstWord.slice(-1) == 'ф' || firstWord.slice(-1) == 'х' || firstWord.slice(-1) == 'ц' || firstWord.slice(-1) == 'ч' || firstWord.slice(-1) == 'ш' || firstWord.slice(-1) == 'щ'){
+                            firstWord += 'у';
+                        }
+                        else if(firstWord.slice(-1) == 'й'){
+                            firstWord = firstWord.slice(0, -1) + 'ю';
+                        }
+                        else if(firstWord.slice(-1) == 'я'){
+                            firstWord = firstWord.slice(0, -1) + 'е';
+                        }
+                        if(secondWorld.slice(-1) == 'б'  || secondWorld.slice(-1) == 'в' || secondWorld.slice(-1) == 'г' || secondWorld.slice(-1) == 'д'  || secondWorld.slice(-1) == 'ж' || secondWorld.slice(-1) == 'з' || secondWorld.slice(-1) == 'к'  || secondWorld.slice(-1) == 'л' || secondWorld.slice(-1) == 'м' || secondWorld.slice(-1) == 'н' || secondWorld.slice(-1) == 'п' || secondWorld.slice(-1) == 'р' || secondWorld.slice(-1) == 'с' || secondWorld.slice(-1) == 'т' || secondWorld.slice(-1) == 'ф' || secondWorld.slice(-1) == 'х' || secondWorld.slice(-1) == 'ц' || secondWorld.slice(-1) == 'ч' || secondWorld.slice(-1) == 'ш' || secondWorld.slice(-1) == 'щ'){
+                            secondWorld += 'у';
+                        }
+                        else if(secondWorld.slice(-1) == 'й'){
+                            secondWorld = secondWorld.slice(0, -1) + 'ю';
+                        }
+                        else if(secondWorld.slice(-1) == 'я'){
+                            secondWorld = secondWorld.slice(0, -1) + 'е';
+                        }
+                        recipient__name[i] = firstWord + ' ' + secondWorld;
+                    }
+                    else{
+                        if(recipient__name[i].slice(-1) == 'б'  || recipient__name[i].slice(-1) == 'в' || recipient__name[i].slice(-1) == 'г' || recipient__name[i].slice(-1) == 'д'  || recipient__name[i].slice(-1) == 'ж' || recipient__name[i].slice(-1) == 'з' || recipient__name[i].slice(-1) == 'к'  || recipient__name[i].slice(-1) == 'л' || recipient__name[i].slice(-1) == 'м' || recipient__name[i].slice(-1) == 'н' || recipient__name[i].slice(-1) == 'п' || recipient__name[i].slice(-1) == 'р' || recipient__name[i].slice(-1) == 'с' || recipient__name[i].slice(-1) == 'т' || recipient__name[i].slice(-1) == 'ф' || recipient__name[i].slice(-1) == 'х' || recipient__name[i].slice(-1) == 'ц' || recipient__name[i].slice(-1) == 'ч' || recipient__name[i].slice(-1) == 'ш' || recipient__name[i].slice(-1) == 'щ'){
+                            recipient__name[i] += 'у';
+                        }
+                        else if(recipient__name[i].slice(-1) == 'й'){
+                            recipient__name[i] = recipient__name[i].slice(0, -1) + 'ю';
+                        }
+                        else if(recipient__name[i].slice(-1) == 'я'){
+                            recipient__name[i] = recipient__name[i].slice(0, -1) + 'е';
+                        }
+                    }
+                    
                     if(recipient__money[i]>0 && debtor__money[q]>0 && recipient__money[i]>debtor__money[q]){
-                        money_result.innerHTML += `<div>${debtor__name[q]} отправит ${debtor__money[q]}₽ ${recipient__name[i]}у</div>`;
+                        money_result.innerHTML += `<div>${debtor__name[q]} отправит ${(Math.round(((debtor__money[q]) + Number.EPSILON) * 100) / 100)}₽ ${recipient__name[i]}</div>`;
                         console.log('1');
                         recipient__money[i] -= debtor__money[q];
                         debtor__money[q] = 0;
                     }
                     else if(recipient__money[i]>0 && debtor__money[q]>0 && recipient__money[i]<debtor__money[q]){
-                        money_result.innerHTML += `<div>${debtor__name[q]} отправит ${recipient__money[i]}₽ ${recipient__name[i]}у</div>`;
+                        money_result.innerHTML += `<div>${debtor__name[q]} отправит ${(Math.round(((recipient__money[i]) + Number.EPSILON) * 100) / 100)}₽ ${recipient__name[i]}</div>`;
                         console.log('2');
-                        recipient__money[i] = 0;
                         debtor__money[q] -= recipient__money[i];
+                        recipient__money[i] = 0;
                     }
                     else if(recipient__money[i]>0 && debtor__money[q]>0 && recipient__money[i]==debtor__money[q]){
-                        money_result.innerHTML += `<div>${debtor__name[q]} отправит ${recipient__money[i]}₽ ${recipient__name[i]}у</div>`;
+                        money_result.innerHTML += `<div>${debtor__name[q]} отправит ${(Math.round(((debtor__money[q]) + Number.EPSILON) * 100) / 100)}₽ ${recipient__name[i]}</div>`;
                         console.log('3');
                         recipient__money[i] = 0;
                         debtor__money[q] = 0;
                     }
                 }
             }
-            money_result.innerHTML += `<h3>Внимание!!! На данный момент функция, показывающая кто кому сколько должен находится в стадии тестирования!<br>При возникновении ошибок пишите <a href="https://vk.com/artur.safin">Артуру</a></h3>`;
         }
         else{
             let money_result = document.querySelector('.calc__money_result');

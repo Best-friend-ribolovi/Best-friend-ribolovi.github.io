@@ -19,4 +19,4 @@ jQuery.preloadImages = function()
    jQuery("<img>").attr("src", arguments[ i ]);
   }
  };
-$.preloadImages("../img/bg.webp", "../img/footer.webp", "../icons/PersoneCheck.svg", "../icons/MaksimCheck.svg", "../icons/RadmirCheck.svg");
+$.preloadImages("../img/bg.webp", "../img/footer.webp", "../icons/PersoneCheck.svg", "../icons/MaksimCheck.svg", "../icons/RadmirCheck.svg", "../icons/Maksim.svg", "../icons/Radmir.svg", "../icons/DamirCheck.svg", "../icons/Damir.svg");
