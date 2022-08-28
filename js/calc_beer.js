@@ -78,8 +78,8 @@ window.addEventListener('DOMContentLoaded', function(){
         else{radmir.style.background = "url('./icons/Radmir.svg') center/cover";radmirText.innerHTML = 'Радмир не будет пить';}
     });
     damir.parentElement.addEventListener('click', ()=>{
-        if(damir.style.background == 'url("./icons/Damir.svg") center center / cover'){damir.style.background = "url('./icons/DamirCheck.svg') center/cover";damirText.innerHTML = 'Дамир никогда не пьет!!!';}
-        else{ damir.style.background = "url('./icons/Damir.svg') center/cover";console.log(damir.style.background);damirText.innerHTML = 'Больше не трогай. Дамир пить не будет!';}
+        if(damir.style.background == 'url("./icons/Damir.svg") center center / cover'){damir.style.background = "url('./icons/DamirCheck.svg') center/cover";damirText.innerHTML = 'Дамир никогда не пьет, но с нами проведет время!';}
+        else{ damir.style.background = "url('./icons/Damir.svg') center/cover";console.log(damir.style.background);damirText.innerHTML = 'Дамир пить не будет! Но куда мы без Дамира? :(';}
     });
     let input__calc = document.querySelector('.input__calc'),
         input__calc_text = document.querySelector('.calc__beer_range .text');
@@ -101,23 +101,23 @@ window.addEventListener('DOMContentLoaded', function(){
         else{
             if(input__calc.value == 0){
                 final(persone, 1.5, 2, 0.5, 0);
-                snack(persone,1, 1, 1, 0);
+                snack(persone,1, 0);
             }
             else if(input__calc.value == 1){
                 final(persone, 2.5, 3, 1, 1);
-                snack(persone,1, 1, 1, 1);
+                snack(persone,1, 1);
             }
             else if(input__calc.value == 2){
                 final(persone, 2.5, 3, 1, 1);
-                snack(persone,1, 1, 1, 2);
+                snack(persone,1, 2);
             }
             else if(input__calc.value == 3){
                 final(persone, 2.5, 3, 1, 1);
-                snack(persone,1, 1, 1, 3);
+                snack(persone,1, 3);
             }
             else if(input__calc.value == 4){
                 final(persone, 2.5, 3, 1, 1);
-                snack(persone,1, 1, 1, 4);
+                snack(persone,1, 4);
             }
         }
     });
@@ -135,29 +135,33 @@ window.addEventListener('DOMContentLoaded', function(){
         else{
             calc__beer_result.innerHTML = `Вам нужно купить ${point} литр${litr} пива для того, чтобы забыть печаль! Примерный процент в пиве ≈ 5`;
         }
+        if(damirText.textContent == "Дамир никогда не пьет, но с нами проведет время!"){
+            calc__beer_result.innerHTML += `<div>Дамиру нужно 2 литра лимонада!</div>`;
+        }
     }
-    function snack(persone,personeChislo, maksim, radmir, check){
+    function snack(persone,personeChislo, check){
         let point = 0;
         let litr = 'а';
         if(persone[0].style.background != 'url("./icons/PersoneCheck.svg") center center / cover'){point = 0;}
         else{point = ((personeNumber+1)*personeChislo);}
-        if(maksimText.textContent == "Естественно Максим пьет"){point += maksim;}
-        if(radmirText.textContent == "Радмир будет с нами пить и компания очень этому рада"){point += radmir;}
+        if(maksimText.textContent == "Естественно Максим пьет"){point += 1;}
+        if(radmirText.textContent == "Радмир будет с нами пить и компания очень этому рада"){point += 1;}
+        if(damirText.textContent == "Дамир никогда не пьет, но с нами проведет время!"){point += 1;}
         if(point>5){litr = 'ов';}else if(point==1){litr = '';}
         if(check == 0){
-            calc__beer_result.innerHTML += `<div>Вам нужно купить снеки</div>`;
+            calc__beer_result.innerHTML += `<div>Вам нужно купить снеки ${Math.ceil(point/2)} шт. и чипсы ${Math.floor((point-0.1)/2)} шт.</div>`;
         }
         else if(check == 1){
-            calc__beer_result.innerHTML += `<div>Вам нужно купить снеки и сосиски</div>`;
+            calc__beer_result.innerHTML += `<div>Вам нужно купить снеки ${Math.ceil(point/2)} шт., чипсы ${Math.ceil(point/2)} шт.</div>`;
         }
         else if(check == 2){
-            calc__beer_result.innerHTML += `<div>Вам нужно купить снеки, сосиски, и МИАСО</div>`;
+            calc__beer_result.innerHTML += `<div>Вам нужно купить снеки ${Math.ceil(point/2)} шт., чипсы ${Math.ceil(point/2)} шт. и сосиски ${point*3} шт.</div>`;
         }
         else if(check == 3){
-            calc__beer_result.innerHTML += `<div>Вам нужно купить снеки, сосиски, и МИАСО</div>`;
+            calc__beer_result.innerHTML += `<div>Вам нужно купить снеки ${Math.ceil(point/2)} шт., чипсы ${Math.ceil(point/2)} шт., сосиски ${point*3} шт. и мясо ${(Math.round(((((point-1) * 0.2) + 0.3) + Number.EPSILON) * 100) / 100)} кг</div>`;
         }
         else if(check == 4){
-            calc__beer_result.innerHTML += `<div>Вам нужно купить снеки, сосиски, и МИАСО</div>`;
+            calc__beer_result.innerHTML += `<div>Вам нужно купить снеки ${Math.ceil(point/2)} шт., чипсы ${Math.ceil(point/2)} шт., сосиски ${point*3} шт. и мясо ${(Math.round(((point*0.3) + Number.EPSILON) * 100) / 100)} кг</div>`;
         }
     }
 });
