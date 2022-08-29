@@ -6,6 +6,8 @@
 @import "../css/header.css";
 @import "../css/plug.css";
 @import "../css/album.css";
+@import "../css/table.css";
+
 body{
     font-size: 15px;
 }
