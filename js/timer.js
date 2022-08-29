@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', function(){
     'use strict';
-    let deadline = '2022-12-31';
+    let deadline = '2022-09-01';
     function getTimeRemaining(endtime){
         let t = Date.parse(endtime) - Date.parse(new Date()),
             seconds = Math.floor((t/1000) % 60),
