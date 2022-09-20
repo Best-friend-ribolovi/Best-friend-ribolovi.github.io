@@ -1,0 +1,47 @@
+.basket{
+    position: fixed;
+    width: 96px;
+    height: 96px;
+    right: 0;
+    bottom: 15%;
+    background: linear-gradient(224.82deg, #010B4B 0.85%, #1900AE 58.45%, #4731FC 102.14%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 6px 0px 0px 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;    
+    cursor: pointer;
+}
+.basket__icon{
+    position: relative;
+}
+.basket__icon_number{
+    position: absolute;
+    top: -8.85px;
+    right: -13px;
+    background: #9093E8;
+    border-radius: 100%;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 13px;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3.5px 2px;
+    height: 20px;
+    width: 20px;
+}
+@media(max-width:540px){
+    .basket{
+        width: 72px;
+        height: 72px;
+        bottom: 28%;
+    }
+    .basket__icon img{
+        height: 41px;
+        width: 42px;
+
+    }
+}

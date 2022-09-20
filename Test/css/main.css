@@ -1,0 +1,17 @@
+
+@import "../css/bootstrap.min.css";
+
+@import "../css/swiper.css";
+@import "../css/normalize.css";
+@import "../css/fonts.css";
+@import "../css/header.css";
+@import "../css/catalog.css";
+@import "../css/map.css";
+@import "../css/about.css";
+@import "../css/call.css";
+@import "../css/footer.css";
+@import "../css/basket.css";
+body{
+    font-family: 'Futura PT';
+    font-style: normal;
+}
