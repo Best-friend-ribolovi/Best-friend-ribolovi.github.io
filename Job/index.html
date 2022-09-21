@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Криптообменник</title>
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+</head>
+<body>
+    <header>
+        <div class="icon-one">
+            <div class="hamburger hamburger-one"></div>
+        </div>
+        <div class="container">
+            <div class="header">
+                <a href="#" class="icon" ><img class="logo" src="./img/logo.png" alt=""></a>
+                <div class="header-block">
+                    <ul class="menu">
+                        <li><a class="nav-link" href="#">Обмен</a></li>
+                        <li><a class="nav-link" href="#">Отзывы</a></li>
+                        <li><a class="nav-link" href="#">Партнерам</a></li>
+                        <li><a class="nav-link" href="#">Резервы</a></li>
+                        <li><a class="nav-link" href="#">Правила</a></li>
+                        <li><a class="nav-link" href="#">Контакты</a></li>
+                    </ul>
+                    <div class="autorize-block">
+                        <div class="autorize">Вход</div>
+                        <div class="register">Регистрация</div>
+                    </div>
+                </div>
+                
+
+            </div>
+        </div>
+    </header>
+    <section class="converter">
+        <div class="container">
+            <h1>Обменник электронных денег будущего</h1>
+            <div class="pay-blocks">
+                <div class="you-pay">
+                    <div class="you-pay-title"><span>Отдаете</span><span class="little" id="you-crypto1">BTC</span></div>
+                    <div class="pay-inputs">
+                        <div class="pay-inputs-block">
+                            <input type="number" class="you-pay-number" id="you-pay-number1" placeholder="Сумма">
+                        </div>
+                        <div class="pay-selects-block">
+                            <select id="you-pay-crypto1">
+                                <option class="crypto1" value="Bitcoin">Bitcoin</option>
+                                <option class="crypto1" value="Etherium">Etherium</option>
+                                <option class="crypto1" value="Tether TRC-20">Tether TRC-20</option>
+                                <option class="crypto1" value="Litecoin">Litecoin</option>
+                                <option class="crypto1" value="ZCash">ZCash</option>
+                                <option class="crypto1" value="Stellar">Stellar</option>
+                                <option class="crypto1" value="Dash">Dash</option>
+                                <option class="crypto1" value="Dogecoin">Dogecoin</option>
+                                <option class="crypto1" value="TRON">TRON</option>
+                                <option class="crypto1" value="Monero">Monero</option>
+                                <option class="crypto1" value="Tezos">Tezos</option>
+                                <option class="crypto1" value="Binance Coin (BNB)">Binance Coin (BNB)</option>
+                            </select>
+                        </div>
+                        
+                    </div>
+                    <div class="you-pay-title email">EMAIL:</div>
+                    <input type="email" id="email" class="email" placeholder="(Не обязательно)">
+                    
+                </div>
+    
+                <div class="you-gift">
+                    <div class="you-pay-title"><span>Получаете</span><span class="little" id="you-crypto2" class="crypto2">ETH</span></div>
+                    <div class="pay-inputs">
+                        <div class="pay-inputs-block">
+                            <input type="number" class="you-pay-number" id="you-pay-number2" placeholder="Сумма">
+                        </div>
+                        <div class="pay-selects-block">
+                            <select id="you-pay-crypto2">
+                                <option class="crypto2" value="Etherium">Etherium</option>
+                                <option class="crypto2" value="Bitcoin">Bitcoin</option>
+                                <option class="crypto2" value="Tether TRC-20">Tether TRC-20</option>
+                                <option class="crypto2" value="Litecoin">Litecoin</option>
+                                <option class="crypto2" value="ZCash">ZCash</option>
+                                <option class="crypto2" value="Stellar">Stellar</option>
+                                <option class="crypto2" value="Dash">Dash</option>
+                                <option class="crypto2" value="Dogecoin">Dogecoin</option>
+                                <option class="crypto2" value="TRON">TRON</option>
+                                <option class="crypto2" value="Monero">Monero</option>
+                                <option class="crypto2" value="Tezos">Tezos</option>
+                                <option class="crypto2" value="Binance Coin (BNB)">Binance Coin (BNB)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="you-pay-title email">НА КОШЕЛЁК:</div>
+                    <input type="text" class="email" id="wallet">
+                </div>
+            </div>
+            <div class="converter-footer">
+                <div class="converter-footer-blocks">
+                    <div class="check-blocks">
+                        <div class="check-block">
+                            <input type="checkbox">
+                            <div class="check-block-text">Я согласен с правилами обмена</div>
+                        </div>
+                        <div class="check-block">
+                            <input type="checkbox">
+                            <div class="check-block-text">Использовать бонусы: <span class="bonus">0</span></div>
+                        </div>
+                    </div>
+                    <a href="./html/pay.html" class="converter-button">НАЧАТЬ ОБМЕН</a>
+                    <div class="contact-block">
+                        <div class="contact-block-text">
+                            Воспользуйтесь нашим ботом
+                        </div>
+                        <a href="#" class="contact-block-icon">
+                            <img src="./img/work/tg.svg" alt="#">
+                            Телеграм-бот
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="work">
+        <div class="container">
+            <h2>Работа сервиса в важных значениях</h2>
+            <div class="work-blocks row">
+                <div class="work-block col-lg-2 col-md-3 col-sm-4 col-6"><div class="work-img"><img src="./img/work/1.svg" alt=""></div><div class="work-title">Среднее время<br>выполнения заявки</div></div>
+                <div class="work-block col-lg-2 col-md-3 col-sm-4 col-6"><div class="work-img"><img src="./img/work/2.svg" alt=""></div><div class="work-title">Полуавтоматическая<br>обработка</div></div>
+                <div class="work-block col-lg-2 col-md-3 col-sm-4 col-6"><div class="work-img"><img src="./img/work/3.svg" alt=""></div><div class="work-title">Постоянных<br>клиентов</div></div>
+                <div class="work-block col-lg-2 col-md-3 col-sm-4 col-6"><div class="work-img"><img src="./img/work/4.svg" alt=""></div><div class="work-title">Только <br>актуальные курсы</div></div>
+                <div class="work-block col-lg-2 col-md-3 col-sm-4 col-6"><div class="work-img"><img src="./img/work/5.svg" alt=""></div><div class="work-title">Многозадачность<br>сервиса</div></div>
+                <div class="work-block col-lg-2 col-md-3 col-sm-4 col-6"><div class="work-img"><img src="./img/work/6.svg" alt=""></div><div class="work-title">Переводы по миру в криптовалюте</div></div>
+                <div class="work-block col-lg-2 col-md-3 col-sm-4 col-6"><div class="work-img"><img src="./img/work/7.svg" alt=""></div><div class="work-title">Накопительная<br> система скидок</div></div>
+                <div class="work-block col-lg-2 col-md-3 col-sm-4 col-6"><div class="work-img"><img src="./img/work/8.svg" alt=""></div><div class="work-title">Выгодная партнерская программа</div></div>
+                <div class="work-block col-lg-2 col-md-3 col-sm-4 col-6"><div class="work-img"><img src="./img/work/9.svg" alt=""></div><div class="work-title">Поддержка<br>клиентов</div></div>
+                <div class="work-block col-lg-2 col-md-3 col-sm-4 col-6"><div class="work-img"><img src="./img/work/10.svg" alt=""></div><div class="work-title">Двухуровневая система проверки заявок</div></div>
+                <div class="work-block col-lg-2 col-md-3 col-sm-4 col-6"><div class="work-img"><img src="./img/work/11.svg" alt=""></div><div class="work-title">Высокая степень<br> защищенности</div></div>
+                <div class="work-block col-lg-2 col-md-3 col-sm-4 col-6"><div class="work-img"><img src="./img/work/12.svg" alt=""></div><div class="work-title">Удобный<br>интерфейс</div></div>
+            </div>
+            <h3>Каждый 3 клиент становится постоянным!</h3>
+        </div>
+    </section>
+    <section class="feedback">
+        <div class="container">
+            <div class="feedback-block col-lg-6">
+                <div class="feedback-up">
+                    <div class="title">Отзывы</div>
+                    <a href="#" class="button">Оставить отзыв</a>
+                </div>
+                <div class="feedback-message">
+                    <div class="message-block">Спасибо. Деньги пришли через 6 минут после оплаты , пишу отзыв как и обещал.</div>
+                    <div class="message-info"><div class="name">Евгений</div><div class="date">12 Август 2022, 10:22</div></div>
+                </div>
+                <div class="feedback-message">
+                    <div class="message-block">сделал обмен биткоин на эфир. Все честно, спасибо. номер транзакции 1365239!</div>
+                    <div class="message-info"><div class="name">Bobi</div><div class="date">12 Август 2022, 04:48</div></div>
+                </div>
+                <div class="feedback-message">
+                    <div class="message-block">Спасбо, все пришло , даже с курсом не обманули , приятно удивлен.</div>
+                    <div class="message-info"><div class="name">Дмитрий</div><div class="date">11 Август 2022, 23.14</div></div>
+                </div>
+            </div>
+            <div class="last-transaction col-lg-6">
+                <div class="title">Последние транзакции</div>
+                <div class="history-block">
+                    <div class="history-one"><div class="value"><span class="how">902 </span><span class="crypto">DASH</span></div><div class="time">Менее часа назад</div></div>
+                    <div class="history-two"><div class="value"><span class="how">257.75969 </span><span class="crypto">XMR</span><div class="cours">Курс: <span class="how-crypto">1 </span><span class="crypto">DASH</span> = <span class="sum">0.285764622974 </span><span class="who-crypto">XMR</span></div></div></div>
+                </div>
+                <div class="history-block">
+                    <div class="history-one"><div class="value"><span class="how">0.59 </span><span class="crypto">BTC</span></div><div class="time">Менее часа назад</div></div>
+                    <div class="history-two"><div class="value"><span class="how">42.3928 </span><span class="crypto">BNB</span><div class="cours">Курс: <span class="how-crypto">1 </span><span class="crypto">BTC</span> = <span class="sum">71.8522047833 </span><span class="who-crypto">BNB</span></div></div></div>
+                </div>
+                <div class="history-block">
+                    <div class="history-one"><div class="value"><span class="how">1226.96 </span><span class="crypto">BNB</span></div><div class="time">Менее часа назад</div></div>
+                    <div class="history-two"><div class="value"><span class="how">2913349.56522 </span><span class="crypto">XLM</span><div class="cours">Курс: <span class="how-crypto">1 </span><span class="crypto">BNB</span> = <span class="sum">2374.44543035 </span><span class="who-crypto">XLM</span></div></div></div>
+                </div>
+                <div class="history-block">
+                    <div class="history-one"><div class="value"><span class="how">480.94 </span><span class="crypto">XTZ</span></div><div class="time">Менее часа назад</div></div>
+                    <div class="history-two"><div class="value"><span class="how">0.51725 </span><span class="crypto">ETH</span><div class="cours">Курс: <span class="how-crypto">1 </span><span class="crypto">XTZ</span> = <span class="sum">0.00107549290324 </span><span class="who-crypto">ETH</span></div></div></div>
+                </div>
+                <div class="history-block">
+                    <div class="history-one"><div class="value"><span class="how">636.13 </span><span class="crypto">DASH</span></div><div class="time">Менее часа назад</div></div>
+                    <div class="history-two"><div class="value"><span class="how">228882.62201 </span><span class="crypto">XLM</span><div class="cours">Курс: <span class="how-crypto">1 </span><span class="crypto">DASH</span> = <span class="sum">359.804791482 </span><span class="who-crypto">XLM</span></div></div></div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <section class="info">
+        <div class="container">
+            <h3>BTC Bitcoin на ETH Ethereum</h3>
+            <h4>ОБМЕН BITCOIN НА ETHEREUM - БЫСТРО И БЕЗОПАСНО</h4>
+            <p>Уважаемые клиенты, предлагаем вашему вниманию быстрый и качественный обмен Bitcoin на Ethereum. Для этого Вам потребуется пройти всего несколько простых шагов от заполнения реквизитов до подтверждения оплаты.</p>
+            <p>1. Итак, для начала, после выбора направления в форме на главной странице сайта, Вам потребуется указать сумму, которую Вы хотите обменять. Вы можете указать в верхнее поле сумму, которую вы желаете перевести и автоматически увидите сколько получите Ethereum на свой кошелек. Если же Вам требуется получить ровную сумму в ETH, Вы можете указать в поле: «Вы получаете» число Ethereum, необходимых Вам после обмена и система так же Вам покажет, сколько вам потребуется перевести Bitcoin. Наш автоматический калькулятор посчитает все автоматически исходя из курса обмена на момент формирования заявки на обмен.</p>
+            <p>2. После того как Вы определились с суммой обмена, нажмите на кнопку «Начать обмен». Перед Вами появится квитанция с укзанием реквизитов для оплаты. После поступления вашей оплаты на указанные реквизиты, система автоматически в течении 1-5 минут выполнит платеж на указанные вами реквизиты. Пожалуйста, внимательно проверьте правилность введения вашего кошелька при заполнении заявки на обмен.</p>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row footer-blocks">
+                <div class="col-lg-2 col-6">
+                    <a href="#" class="logo"><img class="footer-img"src="./img/logo.png" alt=""></a>
+                </div>
+                <div class="col-lg-8 col-6">
+                    <div class="footer-link-block">
+                        <ul>
+                            <li><a href="#">Главная</a></li>
+                            <li><a href="#">Партнёрам</a></li>
+                            <li><a href="#">Резервы</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">Правила</a></li>
+                            <li><a href="#">Конфиденциальность</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">Войти</a></li>
+                            <li><a href="#">Регистрация</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-social col-lg-2 col-6"><div class="text">Мы в соцсетях:</div><a href="#"><img src="./img/work/tg.svg" alt=""></a></div>
+            </div>
+            <div class="copyright">Copyright © 2022 Smart-Swap.org</div>
+        </div>
+    </footer>
+</body>
+<script src="./js/jquery.js"></script>
+<script src="./js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+</html>
