@@ -1,0 +1,85 @@
+.container{
+    width: 45%;
+    margin: 0 auto;
+}
+.map-line{
+    width: 100%;
+    display: flex;
+}
+.block{
+    width: 12.5%;
+    height: 120px;
+    display: flex;
+}
+.block-white{
+    background: white;
+}
+.block-black{
+    background: black;
+}
+.white{
+    background-color: white;
+    border-radius: 100%;
+    border: 1px solid black;
+    margin: auto;
+    width: 80%;
+    height: 80%;
+}
+.black{
+    background-color: black;
+    border-radius: 100%;
+    border: 1px solid white;
+    margin: auto;
+    width: 80%;
+    height: 80%;
+}
+h3{
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+}
+.green{
+    background-color: green;
+}
+.kill, .kill2{
+    background-color: rgb(233, 14, 14);
+}
+.winner {
+    position: fixed;
+    top: calc(50% - 100px);
+    left: calc(50% - 100px);
+    background: white;
+    padding: 50px;
+}
+.winner .title{
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.winner .text {
+    margin-bottom: 15px;
+}
+.winner .button-block{
+    display: flex;
+    justify-content: space-between;
+}
+.winner-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000000a3;
+    display: none;
+    transition: 1s all;
+}
+.winner-container.active {
+    display: block;
+}
+.shashki{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.shashki .container {
+    max-width: 40%;
+}
