@@ -78,6 +78,7 @@ h3{
 }
 .shashki{
     padding-top: 15px;
+    position: relative;
     padding-bottom: 15px;
 }
 .shashki .container {
