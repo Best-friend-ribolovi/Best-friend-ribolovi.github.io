@@ -83,3 +83,13 @@ h3{
 .shashki .container {
     max-width: 40%;
 }
+@media(max-width:1024px){
+    .shashki .container {
+        max-width: 80%;
+    }
+}
+@media(max-width:768px){
+    .shashki .container {
+        max-width: 100%;
+    }
+}

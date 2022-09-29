@@ -4,7 +4,10 @@ window.addEventListener('DOMContentLoaded', function(){
         who = document.querySelector('#who');
     //Верстка
     blocks.forEach(i => {i.style.height = blocks[0].offsetWidth + "px";});
-    
+    window.addEventListener('resize', function() {
+        console.log('Поменялись епта')
+        blocks.forEach(i => {i.style.height = blocks[0].offsetWidth + "px";});
+    });
     //Игра
     let player = "white";
     map.addEventListener('click', (event)=>{                
