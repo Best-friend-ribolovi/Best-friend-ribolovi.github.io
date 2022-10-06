@@ -1,0 +1,27 @@
+
+
+:root{
+    --index: calc(1vw + 1vh);
+}
+
+.happy-birthday{
+    text-align: center;
+}
+.happy-birthday h2{
+    font-size: calc(var(--index) * 1.8);
+}
+.happy-birthday h3{
+    font-size: calc(var(--index) * 1.2);
+    position: absolute;
+    top: 0;
+    margin: 25px 0 0 0;
+    width: 100%;
+}
+.happy-birthday__photo{
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+}
+.happy-birthday__photo_img{
+    max-height: calc(var(--index) * 30);
+}
