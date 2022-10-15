@@ -1,0 +1,14 @@
+.me{
+    padding: 100px 0 200px;
+    background: url('../bg/me.jpg') center/cover;
+    z-index: 10;
+    position: relative;
+}
+.me .text{
+    margin: 60px 0;
+}
+.me .link-button{
+    margin: 60px 0;
+    background-color: #523E31;
+    width: 22%;
+}

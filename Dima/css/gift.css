@@ -1,0 +1,76 @@
+.gift{
+    padding: 100px 0;
+}
+.gift-blocks {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+.gift-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.gift-block .text{
+    font-size: 18px;
+}
+.gift-what img{
+    width: 284px;
+    height: 200px;
+    object-fit: cover;
+}
+.gift-what {
+    margin-top: 80px;
+    position: relative;
+}
+.gift-block .link-button{
+    margin-top: 50px;
+    width: 80%;
+    background-color: #B5D4FF;
+    color: #2E2E2E;
+}
+.gift-what::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    background-color: #000000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.gift-what__text-block {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 10px;
+    z-index: 10;
+}
+.gift-what_text {
+    font-size: 23px;
+}
+.gift-what_price {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+@media(max-width: 992px){
+    .gift-blocks {
+        flex-direction: column;
+        width: 60%;
+        margin: 40px auto 0;
+    }
+    .gift-block {
+        margin: 20px 0 60px;
+    }
+    .gift-what img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}

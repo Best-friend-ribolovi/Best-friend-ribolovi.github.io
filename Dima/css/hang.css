@@ -1,0 +1,52 @@
+.hang{
+    padding: 100px 0;
+}
+.hang-block {
+    display: flex;
+    justify-content: center;    
+    margin: 60px 10% 0;
+    padding-left: 80px;
+    position: relative;
+    height: 50vh;
+    align-items: start;
+}
+.hang-block .text{
+    position: absolute;
+    width: 400px;
+    left: 0;
+    z-index: 10;
+}
+.hang-block .text:last-child{
+    position: absolute;
+    width: 400px;
+    left: unset;
+    right: 0;
+    bottom: 0;
+    text-align: right;
+}
+img.hang-img-bg {
+    opacity: .4;
+    width: 267px;
+    position: absolute;
+    z-index: 1;
+    left: 28%;
+    transform: translate3d(0, calc(var(--scrollTop) / 5), 0);
+}
+img.hang-img-bg:last-child {
+    left: unset;
+    right: 22%;
+    transform: translate3d(0, calc(var(--scrollTop) / -5), 0);
+}
+img.hang-img {
+    width: 338px;
+    z-index: 2;
+}
+.hang-img-photos {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hang-img-photos img{
+    height: fit-content;
+}
