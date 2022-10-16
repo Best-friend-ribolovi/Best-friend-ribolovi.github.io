@@ -118,3 +118,12 @@ a span:hover{
     align-items: center;
     cursor: pointer;
 }
+.step-left {
+    position: relative;
+}
+img.step-left-img {
+    height: 400px;
+    position: absolute;
+    right: 0;
+    transform: translate3d(0, calc(var(--scrollTop) / 4.5), 0);
+}

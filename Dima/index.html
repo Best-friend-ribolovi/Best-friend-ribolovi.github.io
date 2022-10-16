@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-    <header>
+    <header id="header">
         <div class="container">
             <menu>
                 <ul>
-                    <li><a href="#">обо мне</a></li>
-                    <li><a href="#">услуги</a></li>
-                    <li><a href="#">контакты</a></li>
+                    <li><a href="#me" class="yakor">обо мне</a></li>
+                    <li><a href="#gift" class="yakor">услуги</a></li>
+                    <li><a href="#contacts" class="yakor">контакты</a></li>
                 </ul>
             </menu>
             <h1 class="title">ПО-НАСТОЯЩЕМУ ВОЛШЕБНОЕ ЗВУЧАНИЕ<br>УНИКАЛЬНОГО ИНСТРУМЕНТА</h1>
@@ -52,7 +52,7 @@
             </div>
         </div>
     </section>
-    <section class="me">
+    <section class="me" id="me">
         <div class="container">
             <div class="title">обо мне</div>
             <div class="text">
@@ -69,7 +69,8 @@
             </div>
         </div>
     </section>
-    <section class="gift">
+    <section class="gift" id="gift">
+        <img src="./bg/hang-left.png" alt="" class="step-left-img">
         <div class="container">
             <div class="title">предлагаю вам...</div>
             <div class="gift-blocks">
@@ -112,17 +113,18 @@
             </div>
         </div>
     </section>
-    <section class="contacts">
+    <section class="contacts" id="contacts">
         <div class="container">
             <div class="title">мои контакты</div>
             <div class="text">Для связи со мной и обсуждения возникших вопросов можете воспользоваться любым, наиболее удобным для Вас, способом:</div>
             <div class="contants-links">
-                <a href="https://vk.com/sadovoy.handpan" class="contacts-link"><img src="./img/contacts/vk.png" alt="vk"></a>
-                <a href="https://www.tiktok.com/@sadovoy.handpan" class="contacts-link"><img src="./img/contacts/tictok.png" alt="tictok"></a>
-                <a href="https://www.youtube.com/channel/UCFAVXS2WmLdwp0NQofu1IUg" class="contacts-link"><img src="./img/contacts/youtube.png" alt="youtube"></a>
+                <a target="_ blank" href="https://vk.com/sadovoy.handpan" class="contacts-link"><img src="./img/contacts/vk.png" alt="vk"></a>
+                <a target="_ blank" href="https://www.tiktok.com/@sadovoy.handpan" class="contacts-link"><img src="./img/contacts/tictok.png" alt="tictok"></a>
+                <a target="_ blank" href="https://www.youtube.com/channel/UCFAVXS2WmLdwp0NQofu1IUg" class="contacts-link"><img src="./img/contacts/youtube.png" alt="youtube"></a>
             </div>
         </div> 
     </section>
+    
     <footer>
         <div class="footer-block">
             <a href="">Почта: <span>sadovoy.hang@gmail.com</span></a>
@@ -130,17 +132,18 @@
         </div>
         <div class="footer-block">
             <ul>
-                <li><a href="#">обо мне</a></li>
-                <li><a href="#">услуги</a></li>
-                <li><a href="#">контакты</a></li>
+                <li><a href="#me" class="yakor">обо мне</a></li>
+                <li><a href="#gift" class="yakor">услуги</a></li>
+                <li><a href="#contacts" class="yakor">контакты</a></li>
             </ul>
         </div>
         <div class="footer-block">
-            <a href="#">
+            <a href="#header" class="yakor">
                 вернуться вверх ↑
             </a>
         </div>
     </footer>
     <script src="./js/main.js"></script>
+    <script src="./js/jakor.js"></script>
 </body>
 </html>
