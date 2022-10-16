@@ -20,12 +20,12 @@
             <h1 class="title">ПО-НАСТОЯЩЕМУ ВОЛШЕБНОЕ ЗВУЧАНИЕ<br>УНИКАЛЬНОГО ИНСТРУМЕНТА</h1>
             <div class="descr">музыка ханга</div>
             <div class="header-links">
-                <a class="header-link link-button">подробнее</a>
-                <a class="header-link link-button">услуги</a>
+                <a href="#hang" class="header-link link-button yakor">подробнее</a>
+                <a href="#gift" class="header-link link-button yakor">услуги</a>
             </div>
         </div>
     </header>
-    <section class="hang">
+    <section class="hang" id="hang">
         <div class="container">
             <div class="title">
                 ХАНГ - ОДИН ИЗ НОВЕЙШИХ<br>АКУСТИЧЕСКИХ ИНСТРУМЕНТОВ
@@ -60,7 +60,7 @@
                 Этот инструмент обладает уникальным звучанием, <br>
                 не похожим ни на что иное и способным заполнить<br>
                 большое пространство.</div>
-            <a href="https://youtu.be/G9_pUmt-nww" class="link-button">смотреть видео</a>
+            <a target="_ blank" href="https://youtu.be/G9_pUmt-nww" class="link-button">смотреть видео</a>
             <div class="text">
                 Короткий отрывок моей игры на ханге позволит Вам самим<br>
                 убедиться в волшебстве его звучания. <br>
@@ -84,7 +84,7 @@
                         </div>
                         
                     </div>
-                    <div href="" class="link-button">подробнее</div>
+                    <div class="link-button gift-what_button">подробнее</div>
                 </div>
                 <div class="gift-block">
                     <div class="text">добавить в Вашу композицию<br>новой уникальной ноты</div>
@@ -96,7 +96,7 @@
                         </div>
                         
                     </div>
-                    <div href="" class="link-button">подробнее</div>
+                    <div class="link-button gift-what_button">подробнее</div>
                 </div>
                 <div class="gift-block">
                     <div class="text">почувствовать себя<br>музыкантом</div>
@@ -108,7 +108,7 @@
                         </div>
                         
                     </div>
-                    <div href="" class="link-button">подробнее</div>
+                    <div class="link-button gift-what_button">подробнее</div>
                 </div>
             </div>
         </div>
@@ -127,7 +127,7 @@
     
     <footer>
         <div class="footer-block">
-            <a href="">Почта: <span>sadovoy.hang@gmail.com</span></a>
+            <a href="mailto:sadovoy.hang@gmail.com">Почта: <span>sadovoy.hang@gmail.com</span></a>
             <a href="tel:89990666177">Телефон: <span>+79990666177</span></a>
         </div>
         <div class="footer-block">
@@ -143,7 +143,19 @@
             </a>
         </div>
     </footer>
+    <div class="popup">
+        <div class="popup__body">
+            <div class="popup__body_close">X</div>
+            <div class="popup_img"></div>
+            <div class="popup__body_content">
+                <div class="popup__body_content-title">ЗАПИСЬ КОМПОЗИЦИИ ИЛИ ОТДЕЛЬНОЙ ПАРТИИ</div>
+                <div class="popup__body_content-text">Если Вам необходима композиция с хангом в качестве фоновой музыки для видео или если Вы хотите интегрировать данный инструмент в свою песню или бит, я могу записать её для Вас!</div>
+                <button class="popup__body_content-button">связаться</button>
+            </div>
+        </div>
+    </div>
     <script src="./js/main.js"></script>
     <script src="./js/jakor.js"></script>
+    <script src="./js/popup.js"></script>
 </body>
 </html>
