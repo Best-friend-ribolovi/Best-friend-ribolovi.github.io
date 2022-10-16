@@ -1,1 +1,0 @@
-"use strict";document.querySelectorAll("a.yakor").forEach(t=>{t.addEventListener("click",function(t){t.preventDefault();t=this.getAttribute("href").substring(1);const e=document.getElementById(t);t=+e.getBoundingClientRect().top;window.scrollBy({top:t,behavior:"smooth"})})});
