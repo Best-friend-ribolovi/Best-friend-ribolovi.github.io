@@ -1,5 +1,5 @@
 .me{
-    padding: 100px 0 200px;
+    padding: calc(var(--index) * 3.333333)/*100px*/ 0 calc(var(--index) * 6.666666)/*100px*/;
     background: url('../bg/me.jpg') center/cover;
     z-index: 10;
     position: relative;

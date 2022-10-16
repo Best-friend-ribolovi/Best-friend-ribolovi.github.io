@@ -1,11 +1,13 @@
 .gift{
-    padding: 100px 0;
+    padding: calc(var(--index) * 3.333333)/*100px*/ 0;
 }
 .gift-blocks {
-    margin-top: 100px;
+    margin-top: calc(var(--index) * 3.333333)/*100px*/;
     display: flex;
     justify-content: space-around;
     text-align: center;
+    z-index: 10;
+    position: relative;
 }
 .gift-block {
     display: flex;
