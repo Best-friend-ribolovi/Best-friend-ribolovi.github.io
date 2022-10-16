@@ -35,13 +35,13 @@ img.hang-img-bg {
     width: calc(var(--index) * 8.9)/*267px*/;
     position: absolute;
     z-index: 1;
-    left: 28%;
+    left: 90%;
     -webkit-transform: translate3d(0, calc(var(--scrollTop) / 5), 0);
             transform: translate3d(0, calc(var(--scrollTop) / 5), 0);
 }
 img.hang-img-bg:last-child {
     left: unset;
-    right: 22%;
+    right: 90%;
     -webkit-transform: translate3d(0, calc(var(--scrollTop) / -5), 0);
             transform: translate3d(0, calc(var(--scrollTop) / -5), 0);
 }
@@ -50,6 +50,7 @@ img.hang-img {
     z-index: 2;
 }
 .hang-img-photos {
+    position: relative;
     margin-top: calc(var(--index) / 1);/*30px*/
     display: -webkit-box;
     display: -ms-flexbox;
@@ -66,6 +67,13 @@ img.hang-img {
     height: -moz-fit-content;
     height: fit-content;
     height: auto;
+}
+.hang-music {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 2%;
+    left: 35%;
 }
 @media(max-width: 768px){
     .hang-block {
