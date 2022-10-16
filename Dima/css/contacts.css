@@ -1,5 +1,5 @@
 .contacts{
-    padding: 80px 0;
+    padding: calc(var(--index) * 2.666666)/*80px*/ 0;
 }
 .contacts .text, .contants-links {
     width: 60%;
@@ -16,4 +16,14 @@
 }
 .contants-links a:last-child img{
     margin-right: 0;
+}
+@media(max-width: 540px){
+    .contacts .text, .contacts .title,.contacts .contants-links {
+        text-align: center;
+        margin: 20px auto;
+        width: 100%;
+    }
+    .contants-links img{
+        height: 30px;
+    }
 }

@@ -42,7 +42,7 @@ img.hang-img {
     z-index: 2;
 }
 .hang-img-photos {
-    margin-top: 30px;
+    margin-top: calc(var(--index) / 1);/*30px*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,5 +75,20 @@ img.hang-img {
     }
     img.hang-img-bg:last-child {
         right: 75%;
+    }
+}
+@media(max-width:540px){
+    .hang-block .text, .hang-block:last-child .text {
+        width: 65%;
+    }
+    img.hang-img {
+        margin-top: 50px;
+        width: 65%;
+    }
+    img.hang-img-bg {
+        left: 68%;
+    }
+    img.hang-img-bg:last-child {
+        right: 68%;
     }
 }

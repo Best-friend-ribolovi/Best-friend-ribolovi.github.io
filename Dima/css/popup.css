@@ -31,7 +31,7 @@
     font-size: 30px;
 }
 .popup__body_content{
-    padding: 40px 45px;
+    padding: calc(var(--index) * 1.333333)/*40px*/ calc(var(--index) * 1.5)/*45px*/;
     background-color: white;
     color: #523E31;
     display: flex;
@@ -62,4 +62,17 @@
     -webkit-border-radius: 30px;
     padding: 10px 25px;
     font-size: 14px;
+}
+@media(max-width:768px){
+    .popup__body {
+        width: 87%;
+    }
+    .popup__body_close {
+        right: 0;
+    }
+    .popup__body_content-text {
+        margin-top: 10px;
+        font-size: 12px;
+        line-height: 1.5;
+    }
 }

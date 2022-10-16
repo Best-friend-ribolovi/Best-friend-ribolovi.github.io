@@ -26,3 +26,9 @@ footer {
         font-size: 14px;
     }
 }
+@media(max-width: 540px){
+    footer ul li, footer a{
+        margin: unset;
+        font-size: 12px;
+    }
+}

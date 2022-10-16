@@ -1,14 +1,21 @@
 .me{
-    padding: calc(var(--index) * 3.333333)/*100px*/ 0 calc(var(--index) * 6.666666)/*100px*/;
+    padding: calc(var(--index) * 3.333333)/*100px*/ 0 calc(var(--index) * 6.666667)/*200px*/;
     background: url('../bg/me.jpg') center/cover;
     z-index: 10;
     position: relative;
 }
 .me .text{
-    margin: 60px 0;
+    margin: calc(var(--index) * 2)/*60px*/ 0;
 }
 .me .link-button{
-    margin: 60px 0;
+    margin: calc(var(--index) * 2)/*60px*/ 0;
     background-color: #523E31;
     width: 22%;
+    text-align: center;
+}
+@media(max-width: 540px){
+    .me .link-button {
+        width: 55%;
+        font-size: 11px;
+    }
 }
