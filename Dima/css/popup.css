@@ -48,6 +48,26 @@
     font-size: 14px;
     line-height: 1.8;
     color: #2e2e2e;
+    transition: .6s all;
+}
+.popup__body_content-text.active{
+    margin-top: 0;
+    font-size: 0;
+    line-height: 0;
+    color: white;
+}
+#popup-form{
+    display: none;
+    opacity: 0;
+    flex-direction: column;
+    align-items: center;
+    transition: .6s all;
+}
+#popup-form.display-flex{
+    display: flex;
+}
+#popup-form.active{
+    opacity: 1;
 }
 .popup_img img{
     width: 100%;

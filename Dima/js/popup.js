@@ -49,8 +49,10 @@ let giftBlocks = document.querySelector('.gift-blocks'),
     popupClose.addEventListener('click', ()=>{
         closePupup();
     });
-    document.querySelector('.popup').addEventListener('click', ()=>{
-        if(document.querySelector('.popup').classList.contains('active')){
+    document.querySelector('.popup').addEventListener('click', (e)=>{
+        target = e.target;
+        console.log(target);
+        if(target.classList.contains('popup')){
             closePupup();
         }
     });
@@ -62,3 +64,12 @@ let giftBlocks = document.querySelector('.gift-blocks'),
         }, 1000);
         console.log('Закрываем Епта')
     }
+let popupBtn = document.querySelector('.popup__body_content-button'),
+    popupForm = document.querySelector('#popup-form');
+    popupBtn.addEventListener('click', ()=>{
+        console.log('Я живооой');
+            popupForm.classList.add('display-flex');
+            setTimeout(() => {
+                popupForm.classList.add('active');
+            }, 50);
+    })
