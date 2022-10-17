@@ -69,11 +69,40 @@ img.hang-img {
     height: auto;
 }
 .hang-music {
-    width: 50px;
-    height: 50px;
+    width: calc(var(--index) * 2)/*60px*/;
+    height: calc(var(--index) * 2)/*60px*/;
     position: absolute;
+    top: calc(37% - calc(var(--index) * 1));
+    left: calc(49% - calc(var(--index) * 1));
+    z-index: 20;
+}
+.hang-music:nth-child(2) {
+    top: 56%;
+    left: 13%;
+}
+.hang-music:nth-child(3) {
+    top: 67%;
+    left: 45%;
+}
+.hang-music:nth-child(4) {
+    top: 18%;
+    left: 13%;
+}
+.hang-music:nth-child(5) {
+    top: 50%;
+    left: 71%;
+}
+.hang-music:nth-child(6) {
     top: 2%;
     left: 35%;
+}
+.hang-music:nth-child(7) {
+    top: 23%;
+    left: 73%;
+}
+.hang-music:nth-child(8) {
+    top: 8%;
+    left: 57%;
 }
 @media(max-width: 768px){
     .hang-block {
@@ -122,5 +151,52 @@ img.hang-img {
     }
     img.hang-img-bg:last-child {
         right: 68%;
+    }
+
+    /*music*/
+    .hang-music {
+        width: calc(var(--index) * 2.2)/*60px*/;
+        height: calc(var(--index) * 2.2)/*60px*/;
+        position: absolute;
+        top: calc(46% - calc(var(--index) * 1));
+        left: calc(50% - calc(var(--index) * 1));
+        z-index: 20;
+    }
+    .hang-music:nth-child(2) {
+        top: 64%;
+        left: 29%;
+    }
+    .hang-music:nth-child(3) {
+        top: 75%;
+        left: 50%;
+    }
+    .hang-music:nth-child(4) {
+        top: 33%;
+        left: 27%;
+    }
+    .hang-music:nth-child(5) {
+        top: 61%;
+        left: 67%;
+    }
+    .hang-music:nth-child(6) {
+        top: 17%;
+        left: 43%;
+    }
+    .hang-music:nth-child(7) {
+        top: 38%;
+        left: 69%;
+    }
+    .hang-music:nth-child(8) {
+        top: 20%;
+        left: 59%;
+    }
+    
+}
+@media(max-width:400px){
+    img.hang-img-bg {
+        left: 60%;
+    }
+    img.hang-img-bg:last-child {
+        right: 60%;
     }
 }
