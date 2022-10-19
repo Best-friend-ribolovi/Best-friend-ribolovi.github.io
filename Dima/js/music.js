@@ -5,6 +5,9 @@ const music = [new Audio('./music/1.mp3'), new Audio('./music/2.mp3'),
 music.volume = 1;
 let ch = 0;
 document.querySelector('.hang-img-photos').addEventListener('click', function(e){
+    if(!document.querySelector('.attention').classList.contains('active')){
+        document.querySelector('.attention').classList.add('active');
+    }
     target = e.target;
     console.log(target);
     let c = target.classList[1].replace('music','') - 1;

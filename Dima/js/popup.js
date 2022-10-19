@@ -80,36 +80,47 @@ let giftBlocks = document.querySelector('.gift-blocks'),
     }
 
     popupBtn.addEventListener('click', ()=>{
-        if(popupBtn.classList.contains('apply-form')){
-            let popupName = document.querySelector('.popup-name').value,
+        let popupName = document.querySelector('.popup-name').value,
                 popupTel = document.querySelector('.popup-tel').value,
                 popupTg = document.querySelector('.popup-tg').value,
-                popupNewTitle = document.querySelector('.popup__body_content-title').textContent;
-            console.log(popupName, popupTel, popupTg, popupNewTitle);
-            console.log('Отправили!');
-            const request = new XMLHttpRequest();
-            const url = "../php/main.php";
-            const params = JSON.stringify({ "name": popupName, "title": popupNewTitle, "tel": popupTel, "tg": popupTg });
-            console.log(params);
-            request.open("POST", url, true);
-            request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-            request.addEventListener("readystatechange", () => {
-                if(request.readyState === 4 && request.status === 200) {       
-                    console.log(request.responseText);
-                    popupBtn.classList.add('nonactive');
-                    popupText.innerHTML = 'Спасибо за заявку! Скоро я с Вами свяжусь и мы обсудим, как я могу Вам помочь!';
-                    popupForm.classList.remove('active');
-                    setTimeout(() => {
-                        popupForm.classList.remove('display-flex');
-                    }, 600);
+                popupNewTitle = document.querySelector('.popup__body_content-title').textContent,
+                error = document.querySelector('.error');
+        
+        if(popupBtn.classList.contains('apply-form')){
+            if(popupName !='' && popupTel != ''){
+                if(error.classList.contains('active')){
+                    error.classList.remove('active');
                 }
-                else{
-                    popupText.innerHTML = 'Ой...<br>Что-то пошло не так. Пока что Вы можете мне позвонить по номеру <a href="tel:89990666177">+79990666177</a>, а я буду решать проблему с сайтом!';
-                }
-            });
-            request.send(params);
-            console.log('ЗДЕСЬ МЫ ДОЛЖНЫ ПОЛУЧИТЬ ДАННЫЕ');
-            console.log('ЗДЕСЬ МЫ ДОЛЖНЫ ПОЛУЧИТЬ ДАННЫЕ');
+                console.log(popupName, popupTel, popupTg, popupNewTitle);
+                console.log('Отправили!');
+                const request = new XMLHttpRequest();
+                const url = "../php/main.php";
+                const params = JSON.stringify({ "name": popupName, "title": popupNewTitle, "tel": popupTel, "tg": popupTg });
+                console.log(params);
+                request.open("POST", url, true);
+                request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                request.addEventListener("readystatechange", () => {
+                    if(request.readyState === 4 && request.status === 200) {       
+                        console.log(request.responseText);
+                        popupBtn.classList.add('nonactive');
+                        popupText.innerHTML = 'Спасибо за заявку! Скоро я с Вами свяжусь и мы обсудим, как я могу Вам помочь!';
+                        popupForm.classList.remove('active');
+                        setTimeout(() => {
+                            popupForm.classList.remove('display-flex');
+                        }, 600);
+                    }
+                    else{
+                        popupText.innerHTML = 'Ой...<br>Что-то пошло не так. Пока что Вы можете мне позвонить по номеру <a href="tel:89990666177">+79990666177</a>, а я буду решать проблему с сайтом!';
+                    }
+                });
+                request.send(params);
+            }
+            else{
+                error.classList.add('active');
+                if(popupTel == '' && popupName == ''){error.innerHTML = 'Введите имя и номер телефона!'}
+                else if(popupTel == ''){error.innerHTML = 'Введите номер телефона!'}
+                else {error.innerHTML = 'Введите имя!'}
+            }
         }
         else{
             console.log('Я живооой');

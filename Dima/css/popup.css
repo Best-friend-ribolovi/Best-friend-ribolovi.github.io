@@ -99,6 +99,15 @@ button.nonactive {
     opacity: 0;
     cursor:unset;
 }
+.error{
+    color: red;
+    opacity: 0;
+    transition: .2s all;
+}
+.error.active{
+    opacity: 1;
+    margin-top: 15px;
+}
 @media(max-width:768px){
     .popup__body {
         width: 87%;

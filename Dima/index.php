@@ -1,13 +1,10 @@
-<?php
-    echo 'PHP работает.'
-?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Сайт</title>
+    <title>Волшебство музыки с Дмитрием Садовым</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&family=PT+Sans&display=swap" rel="stylesheet">
@@ -46,6 +43,7 @@
                 и ручного барабана.
             </div>
             <div class="hang-img-photos">
+                <div class="attention">Вы можете сами поиграть на ханге! Нажмите на круги и заиграет Ваша музыка!</div>
                 <div class="hang-music music1"></div>
                 <div class="hang-music music2"></div>
                 <div class="hang-music music3"></div>
@@ -155,6 +153,9 @@
             <a href="#header" class="yakor">
                 вернуться вверх ↑
             </a>
+            <a href="https://vk.com/artur.safin" target="_blank">
+                Сайт выполнен Артуром Сафиным
+            </a>
         </div>
     </footer>
     <div class="popup">
@@ -176,6 +177,7 @@
                     <input class="popup-tg" type="tg" placeholder="Ваш аккаунт телеграмма(необязательно)">
                 </form>
                 <button class="popup__body_content-button">связаться</button>
+                <div class="error"></div>
             </div>
         </div>
     </div>

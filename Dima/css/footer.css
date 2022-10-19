@@ -5,9 +5,12 @@ footer {
     padding: 0 50px;
     border-top: 1px solid #fff;
 }
-.footer-block:first-child{
+.footer-block:first-child, .footer-block:last-child{
     display: flex;
     flex-direction: column;
+}
+.footer-block:last-child{
+    text-align: right;
 }
 @media(max-width: 720px){
     footer {
@@ -30,5 +33,8 @@ footer {
     footer ul li, footer a{
         margin: unset;
         font-size: 12px;
+    }
+    .footer-block:last-child{
+        text-align: center;
     }
 }

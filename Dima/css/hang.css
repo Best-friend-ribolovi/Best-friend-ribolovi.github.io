@@ -105,6 +105,20 @@ img.hang-img {
     top: 8%;
     left: 57%;
 }
+.attention {
+    position: absolute;
+    z-index: 20;
+    font-size: calc(var(--index) / 1.5);
+    background: #7a98b2;
+    padding: 10px 20px;
+    top: calc(-19% + 36px);
+    width: calc(var(--index) * 10);
+    right: calc(-150% + calc(var(--index) * 10));
+    transition: .5s all;
+}
+.attention.active{
+    opacity: 0;
+}
 @media(max-width: 768px){
     .hang-block {
         -webkit-box-orient: vertical;
@@ -118,7 +132,7 @@ img.hang-img {
             -ms-flex-align: center;
                 align-items: center;
         padding: 0;
-        height: calc(100% + 130px);
+        height: calc(100% );
         margin: calc(var(--index) * 2)/*60px*/ 0 0;
     }
     .hang-block .text, .hang-block:last-child .text {
@@ -191,7 +205,11 @@ img.hang-img {
         top: 23%;
         left: 57%;
     }
-    
+    .attention {
+        top: calc(-1% + 36px);
+        font-size: calc(var(--index) * 0.8);
+        right: calc(-14% + calc(var(--index) * 10));
+    }
 }
 @media(max-width:400px){
     img.hang-img-bg {
