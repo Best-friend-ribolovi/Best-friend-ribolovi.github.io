@@ -15,69 +15,40 @@
         <div class="container">
             <menu>
                 <ul>
-                    <li><a href="#me" class="yakor">обо мне</a></li>
-                    <li><a href="#gift" class="yakor">услуги</a></li>
-                    <li><a href="#contacts" class="yakor">контакты</a></li>
+                    <li><a href="#me" class="yakor">обо мне</a></li><li><a href="#gift" class="yakor">услуги</a></li><li><a href="#contacts" class="yakor">контакты</a></li>
                 </ul>
             </menu>
             <h1 class="title">ПО-НАСТОЯЩЕМУ ВОЛШЕБНОЕ ЗВУЧАНИЕ УНИКАЛЬНОГО ИНСТРУМЕНТА</h1>
             <div class="descr">музыка ханга</div>
             <div class="header-links">
-                <a href="#hang" class="header-link link-button yakor">подробнее</a>
-                <a href="#gift" class="header-link link-button yakor">услуги</a>
+                <a href="#hang" class="header-link link-button yakor">подробнее</a><a href="#gift" class="header-link link-button yakor">услуги</a>
             </div>
         </div>
     </header>
     <section class="hang" id="hang">
         <div class="container">
-            <div class="title">
-                ХАНГ - ОДИН ИЗ НОВЕЙШИХ<br>АКУСТИЧЕСКИХ ИНСТРУМЕНТОВ
-            </div>
+            <div class="title">ХАНГ - ОДИН ИЗ НОВЕЙШИХ<br>АКУСТИЧЕСКИХ ИНСТРУМЕНТОВ</div>
         </div>
         <div class="hang-block">
-            <div class="text">
-                Ханг (хендпан) является <br>
-                одним из самых молодых акустических<br>
-                инструментов, его придумала фирма PanArt в 2000 году. <br>
-                Звучание этого инструмента невозможно спутать ни с чем, физически это гибрид ксилофона<br>
-                и ручного барабана.
-            </div>
+            <div class="text">Ханг (хендпан) является <br>одним из самых молодых акустических<br>инструментов, его придумала фирма PanArt в 2000 году. <br>Звучание этого инструмента невозможно спутать ни с чем, физически это гибрид ксилофона<br>и ручного барабана.</div>
             <div class="hang-img-photos">
                 <div class="attention">Вы можете сами поиграть на ханге! Нажмите на круги и заиграет Ваша музыка!</div>
-                <div class="hang-music music1"></div>
-                <div class="hang-music music2"></div>
-                <div class="hang-music music3"></div>
-                <div class="hang-music music4"></div>
-                <div class="hang-music music5"></div>
-                <div class="hang-music music6"></div>
-                <div class="hang-music music7"></div>
-                <div class="hang-music music8"></div>
+                <div class="hang-music music1"></div><div class="hang-music music2"></div><div class="hang-music music3"></div><div class="hang-music music4"></div><div class="hang-music music5"></div><div class="hang-music music6"></div><div class="hang-music music7"></div><div class="hang-music music8"></div>
                 <img src="./img/hang/hang_2.png" alt="" class="hang-img-bg hang-bg-1">
                 <img src="./img/hang/hang.png" alt="" class="hang-img">
                 <img src="./img/hang/hang_2.png" alt="" class="hang-img-bg hang-bg-2">
             </div>
-            <div class="text">
-                Данный инструмент <br>используется в различных<br>направлениях музыки, начиная<br>
-                от фонового сопровождения медитативных<br>
-                практик, заканчивая танцевальными композициями<br>
-                и электронной музыкой.
-            </div>
+            <div class="text">Данный инструмент <br>используется в различных<br>направлениях музыки, начиная<br>от фонового сопровождения медитативных<br>практик, заканчивая танцевальными композициями<br>и электронной музыкой.</div>
         </div>
     </section>
     <section class="me" id="me">
         <div class="container">
             <div class="title">обо мне</div>
             <div class="text">
-                Меня зовут Дмитрий, я играю на ханге. <br>
-                Этот инструмент обладает уникальным звучанием, <br>
-                не похожим ни на что иное и способным заполнить<br>
-                большое пространство.</div>
+                Меня зовут Дмитрий, я играю на ханге. <br>Этот инструмент обладает уникальным звучанием, <br>не похожим ни на что иное и способным заполнить<br>большое пространство.</div>
             <a target="_ blank" href="https://youtu.be/G9_pUmt-nww" class="link-button">смотреть видео</a>
             <div class="text">
-                Короткий отрывок моей игры на ханге позволит Вам самим<br>
-                убедиться в волшебстве его звучания. <br>
-                Этот инструмент не требует дополнительной звукоусиливающей<br>
-                аппаратуры. Это его чистый, живой звук.
+                Короткий отрывок моей игры на ханге позволит Вам самим<br>убедиться в волшебстве его звучания. <br>Этот инструмент не требует дополнительной звукоусиливающей<br>аппаратуры. Это его чистый, живой звук.
             </div>
         </div>
     </section>
@@ -93,8 +64,7 @@
                         <div class="gift-what__text-block">
                             <div class="gift-what_text">ВЫСТУПЛЕНИЕ<br>НА МЕРОПРИЯТИИ</div>
                             <div class="gift-what_price">от 3000 руб.</div>
-                        </div>
-                        
+                        </div>  
                     </div>
                     <div class="link-button gift-what_button">подробнее</div>
                 </div>
@@ -106,7 +76,6 @@
                             <div class="gift-what_text">ЗАПИСЬ КОМПОЗИЦИИ,<br>ОТДЕЛЬНОЙ ПАРТИИ</div>
                             <div class="gift-what_price">от 3000 руб.</div>
                         </div>
-                        
                     </div>
                     <div class="link-button gift-what_button">подробнее</div>
                 </div>
@@ -117,8 +86,7 @@
                         <div class="gift-what__text-block">
                             <div class="gift-what_text">МАСТЕР-КЛАСС</div>
                             <div class="gift-what_price">от 2000 руб.</div>
-                        </div>
-                        
+                        </div>       
                     </div>
                     <div class="link-button gift-what_button">подробнее</div>
                 </div>
@@ -150,12 +118,8 @@
             </ul>
         </div>
         <div class="footer-block">
-            <a href="#header" class="yakor">
-                вернуться вверх ↑
-            </a>
-            <a href="https://vk.com/artur.safin" target="_blank">
-                Сайт выполнен Артуром Сафиным
-            </a>
+            <a href="#header" class="yakor">вернуться вверх ↑</a>
+            <a href="https://vk.com/artur.safin" target="_blank">Сайт выполнен Артуром Сафиным</a>
         </div>
     </footer>
     <div class="popup">
@@ -181,15 +145,6 @@
             </div>
         </div>
     </div>
-    <!--<script src="http://unpkg.com/tone"></script>
-    <script src="./js/startAudio.js"></script>-->
-    <script src="./js/jquery.min.js"></script>
-    <script src="./js/jquery.maskedinput.min.js"></script>
-    <script src="./js/inputMask.js"></script>
-    <script src="./js/music.js"></script>
-    <script src="./js/main.js"></script>
-    <script src="./js/jakor.js"></script>
-    <script src="./js/popup.js"></script>
-    
+    <script src="./js/jquery.min.js"></script><script src="./js/jquery.maskedinput.min.js"></script><script src="./js/inputMask.js"></script><script src="./js/music.js"></script><script src="./js/main.js"></script><script src="./js/jakor.js"></script><script src="./js/popup.js"></script>
 </body>
 </html>

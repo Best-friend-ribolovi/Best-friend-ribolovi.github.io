@@ -1,0 +1,21 @@
+header{
+    background: url('../bg/header.jpg') center/cover no-repeat;
+    padding: 0 0 calc(var(--index) * 12.7);/*381px*/
+}
+h1{
+    margin-top: calc(var(--index) * 3.333333);/*100px*/
+    color: #1F160F;
+}
+.header-links{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: calc(var(--index) / 1.5);/*20px*/
+}
+.header-link{
+    background-color: #494D45;
+    margin-right: calc(var(--index) / 2);/*15px*/
+}  
+.header-link:last-child{
+    background-color: #523E31;
+}
