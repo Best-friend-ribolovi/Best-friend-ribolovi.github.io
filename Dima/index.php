@@ -1,3 +1,6 @@
+<?php
+    echo 'PHP работает.'
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -162,8 +165,14 @@
                 <div class="popup__body_content-title">ЗАПИСЬ КОМПОЗИЦИИ ИЛИ ОТДЕЛЬНОЙ ПАРТИИ</div>
                 <div class="popup__body_content-text">Если Вам необходима композиция с хангом в качестве фоновой музыки для видео или если Вы хотите интегрировать данный инструмент в свою песню или бит, я могу записать её для Вас!</div>
                 <form id="popup-form" action="" method="post">
-                    <input class="popup-name" type="name" placeholder="Как к вам обращаться?">
-                    <input class="popup-tel" type="tel" placeholder="Ваш номер телефона">
+                    <input class="popup-name" type="name" placeholder="Как к вам обращаться?" onkeypress="noDigits(event)" require>
+                    <script>
+                        function noDigits(event) {
+                        if ("1234567890".indexOf(event.key) != -1)
+                            event.preventDefault();
+                        }
+                    </script>
+                    <input class="popup-tel" type="tel" placeholder="Ваш номер телефона" require>
                     <input class="popup-tg" type="tg" placeholder="Ваш аккаунт телеграмма(необязательно)">
                 </form>
                 <button class="popup__body_content-button">связаться</button>
@@ -172,9 +181,13 @@
     </div>
     <!--<script src="http://unpkg.com/tone"></script>
     <script src="./js/startAudio.js"></script>-->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery.maskedinput.min.js"></script>
+    <script src="./js/inputMask.js"></script>
     <script src="./js/music.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/jakor.js"></script>
     <script src="./js/popup.js"></script>
+    
 </body>
 </html>

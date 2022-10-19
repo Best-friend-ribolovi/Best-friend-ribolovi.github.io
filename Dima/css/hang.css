@@ -75,6 +75,7 @@ img.hang-img {
     top: calc(37% - calc(var(--index) * 1));
     left: calc(49% - calc(var(--index) * 1));
     z-index: 20;
+    cursor: pointer;
 }
 .hang-music:nth-child(2) {
     top: 56%;
@@ -155,40 +156,40 @@ img.hang-img {
 
     /*music*/
     .hang-music {
-        width: calc(var(--index) * 2.2)/*60px*/;
-        height: calc(var(--index) * 2.2)/*60px*/;
+        width: calc(var(--index) * 3)/*60px*/;
+        height: calc(var(--index) * 3)/*60px*/;
         position: absolute;
-        top: calc(46% - calc(var(--index) * 1));
-        left: calc(50% - calc(var(--index) * 1));
+        top: calc(46% - calc(var(--index) * 1.5));
+        left: calc(50% - calc(var(--index) * 1.5));
         z-index: 20;
     }
     .hang-music:nth-child(2) {
         top: 64%;
-        left: 29%;
+        left: 27%;
     }
     .hang-music:nth-child(3) {
-        top: 75%;
-        left: 50%;
+        top: 74%;
+        left: 48%;
     }
     .hang-music:nth-child(4) {
         top: 33%;
-        left: 27%;
+        left: 25%;
     }
     .hang-music:nth-child(5) {
-        top: 61%;
-        left: 67%;
+        top: 60%;
+        left: 65%;
     }
     .hang-music:nth-child(6) {
-        top: 17%;
-        left: 43%;
+        top: 19%;
+        left: 42%;
     }
     .hang-music:nth-child(7) {
         top: 38%;
-        left: 69%;
+        left: 67%;
     }
     .hang-music:nth-child(8) {
-        top: 20%;
-        left: 59%;
+        top: 23%;
+        left: 57%;
     }
     
 }

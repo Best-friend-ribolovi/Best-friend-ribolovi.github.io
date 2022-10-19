@@ -4,8 +4,9 @@ let giftBlocks = document.querySelector('.gift-blocks'),
     popupTitle = document.querySelector('.popup__body_content-title'),
     popupText = document.querySelector('.popup__body_content-text'),
     popup = document.querySelector('.popup'),
-    popupClose = document.querySelector('.popup__body_close');
-
+    popupClose = document.querySelector('.popup__body_close'),
+    popupBtn = document.querySelector('.popup__body_content-button'),
+    popupForm = document.querySelector('#popup-form');
     giftBlocks.addEventListener('click', (e)=>{
         target = e.target;
         console.log(target);
@@ -62,14 +63,61 @@ let giftBlocks = document.querySelector('.gift-blocks'),
         setTimeout(() => {
             popup.classList.remove('display-flex');
         }, 1000);
-        console.log('Закрываем Епта')
+        setTimeout(() => {
+            if(popupBtn.classList.contains('apply-form')){
+                popupBtn.classList.remove('apply-form');
+            }
+            if(popupBtn.classList.contains('nonactive')){
+                popupBtn.classList.remove('nonactive');
+            }
+            popupBtn.innerHTML = 'Связаться';
+            if(popupForm.classList.contains('active')){
+                popupForm.classList.remove('display-flex');
+                popupForm.classList.remove('active');
+                popupBtn.classList.remove('apply-form');
+            }
+        }, 500);
     }
-let popupBtn = document.querySelector('.popup__body_content-button'),
-    popupForm = document.querySelector('#popup-form');
+
     popupBtn.addEventListener('click', ()=>{
-        console.log('Я живооой');
+        if(popupBtn.classList.contains('apply-form')){
+            let popupName = document.querySelector('.popup-name').value,
+                popupTel = document.querySelector('.popup-tel').value,
+                popupTg = document.querySelector('.popup-tg').value,
+                popupNewTitle = document.querySelector('.popup__body_content-title').textContent;
+            console.log(popupName, popupTel, popupTg, popupNewTitle);
+            console.log('Отправили!');
+            const request = new XMLHttpRequest();
+            const url = "../php/main.php";
+            const params = JSON.stringify({ "name": popupName, "title": popupNewTitle, "tel": popupTel, "tg": popupTg });
+            console.log(params);
+            request.open("POST", url, true);
+            request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            request.addEventListener("readystatechange", () => {
+                if(request.readyState === 4 && request.status === 200) {       
+                    console.log(request.responseText);
+                    popupBtn.classList.add('nonactive');
+                    popupText.innerHTML = 'Спасибо за заявку! Скоро я с Вами свяжусь и мы обсудим, как я могу Вам помочь!';
+                    popupForm.classList.remove('active');
+                    setTimeout(() => {
+                        popupForm.classList.remove('display-flex');
+                    }, 600);
+                }
+                else{
+                    popupText.innerHTML = 'Ой...<br>Что-то пошло не так. Пока что Вы можете мне позвонить по номеру <a href="tel:89990666177">+79990666177</a>, а я буду решать проблему с сайтом!';
+                }
+            });
+            request.send(params);
+            console.log('ЗДЕСЬ МЫ ДОЛЖНЫ ПОЛУЧИТЬ ДАННЫЕ');
+            console.log('ЗДЕСЬ МЫ ДОЛЖНЫ ПОЛУЧИТЬ ДАННЫЕ');
+        }
+        else{
+            console.log('Я живооой');
+            popupBtn.innerHTML = 'Отправить';
+            popupBtn.classList.add('apply-form');
             popupForm.classList.add('display-flex');
             setTimeout(() => {
                 popupForm.classList.add('active');
             }, 50);
+        }
     })
