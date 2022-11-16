@@ -49,7 +49,7 @@
         <div class="container">
             <h2 class="title">обо мне</h2>
             <div class="text">Меня зовут Дмитрий, я играю на ханге. <br>Этот инструмент обладает уникальным звучанием, <br>не похожим ни на что иное и способным заполнить<br>большое пространство.</div>
-            <a target="blank" href="https://youtu.be/G9_pUmt-nww" class="link-button">смотреть видео</a>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/G9_pUmt-nww" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <div class="text">
                 Короткий отрывок моей игры на ханге позволит Вам самим<br>убедиться в волшебстве его звучания. <br>Этот инструмент не требует дополнительной звукоусиливающей<br>аппаратуры. Это его чистый, живой звук.
             </div>
