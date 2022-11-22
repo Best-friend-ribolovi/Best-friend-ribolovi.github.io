@@ -150,8 +150,8 @@ menu{
 }
 .arrow{
     background: var(--bottomArrow);
-    height: calc(var(--index) * 0.845)/*24px*/;
-    width: calc(var(--index) * 1.3666666)/*41px*/;
+    height: calc(var(--index) * 0.7)/*21px*/;
+    width: calc(var(--index) * 1.16666666)/*35px*/;
     position: absolute;
     top: -10px;
     animation-name: upDownArrow;
