@@ -1,0 +1,13 @@
+/* latin-ext */
+@font-face {
+    font-family: 'Cantarell';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/Cantarell-Regular.ttf') format('woff2');
+}
+@font-face {
+    font-family: 'Cantarell';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/Cantarell-Bold.ttf') format('woff2');
+}
