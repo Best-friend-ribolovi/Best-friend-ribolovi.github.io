@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/GTA/static/css/main.81a17bbb.css",
-    "main.js": "/GTA/static/js/main.0b94f9a9.js",
+    "main.css": "/GTA/static/css/main.9a9f4de1.css",
+    "main.js": "/GTA/static/js/main.77c4442b.js",
     "static/js/787.39f847e3.chunk.js": "/GTA/static/js/787.39f847e3.chunk.js",
     "static/media/2.mp3": "/GTA/static/media/2.2b9540b083bde97d0b45.mp3",
     "static/media/16.mp3": "/GTA/static/media/16.db4cbee2328d72c93c89.mp3",
@@ -32,12 +32,12 @@
     "static/media/ViceCity.ttf": "/GTA/static/media/ViceCity.3d7f75a8df06dbd5b57b.ttf",
     "static/media/logo.svg": "/GTA/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/GTA/index.html",
-    "main.81a17bbb.css.map": "/GTA/static/css/main.81a17bbb.css.map",
-    "main.0b94f9a9.js.map": "/GTA/static/js/main.0b94f9a9.js.map",
+    "main.9a9f4de1.css.map": "/GTA/static/css/main.9a9f4de1.css.map",
+    "main.77c4442b.js.map": "/GTA/static/js/main.77c4442b.js.map",
     "787.39f847e3.chunk.js.map": "/GTA/static/js/787.39f847e3.chunk.js.map"
   },
   "entrypoints": [
-    "GTA/static/css/main.81a17bbb.css",
-    "GTA/static/js/main.0b94f9a9.js"
+    "static/css/main.9a9f4de1.css",
+    "static/js/main.77c4442b.js"
   ]
 }
