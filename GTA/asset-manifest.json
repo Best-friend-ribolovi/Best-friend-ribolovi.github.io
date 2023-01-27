@@ -37,7 +37,7 @@
     "787.39f847e3.chunk.js.map": "/GTA/static/js/787.39f847e3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.81a17bbb.css",
-    "static/js/main.0b94f9a9.js"
+    "GTA/static/css/main.81a17bbb.css",
+    "GTA/static/js/main.0b94f9a9.js"
   ]
 }
