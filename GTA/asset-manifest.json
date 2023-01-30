@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/GTA/static/css/main.9a9f4de1.css",
-    "main.js": "/GTA/static/js/main.79eb8e3c.js",
+    "main.css": "/GTA/static/css/main.617e7735.css",
+    "main.js": "/GTA/static/js/main.e6be993e.js",
     "static/js/787.39f847e3.chunk.js": "/GTA/static/js/787.39f847e3.chunk.js",
     "static/media/14.mp3": "/GTA/static/media/14.326f201f4a45608234fc.mp3",
     "static/media/8.mp3": "/GTA/static/media/8.195cca36e31a7ec01163.mp3",
@@ -24,20 +24,27 @@
     "static/media/1.mp3": "/GTA/static/media/1.bbe8d9c2e200f45013df.mp3",
     "static/media/21.mp3": "/GTA/static/media/21.89f455fd038d7b9d5f8d.mp3",
     "static/media/22.mp3": "/GTA/static/media/22.18701ee329c905a393c4.mp3",
-    "static/media/background.jpg": "/GTA/static/media/background.a1c38122a4470561a03b.jpg",
+    "static/media/background.jpg": "/GTA/static/media/background.b204397c69092adcff38.jpg",
     "static/media/20.mp3": "/GTA/static/media/20.1c55f659a9680d936179.mp3",
-    "static/media/logo.png": "/GTA/static/media/logo.5b9c1aec840715c12ac0.png",
+    "static/media/logo.png": "/GTA/static/media/logo.6d8055e755bd998bddb3.png",
+    "static/media/Fever.png": "/GTA/static/media/Fever.38b973160f2ef502de80.png",
     "static/media/RageItalic.ttf": "/GTA/static/media/RageItalic.1b08bca32ea9983ad66f.ttf",
     "static/media/loading.mp3": "/GTA/static/media/loading.49506cc0cb1a564d1b19.mp3",
+    "static/media/v-rock.png": "/GTA/static/media/v-rock.7bafbd23bae3df50412d.png",
+    "static/media/flash.png": "/GTA/static/media/flash.2b353e3bf720d53a10cc.png",
+    "static/media/wave.png": "/GTA/static/media/wave.e6ba4759c5020914cbae.png",
+    "static/media/espantoso.png": "/GTA/static/media/espantoso.ca0a55e9c72107f22187.png",
     "static/media/ViceCity.ttf": "/GTA/static/media/ViceCity.3d7f75a8df06dbd5b57b.ttf",
+    "static/media/emotion.png": "/GTA/static/media/emotion.bfca46d682e03d184b1a.png",
+    "static/media/BankGothicRUSSMedium.ttf": "/GTA/static/media/BankGothicRUSSMedium.41338d0aea176ca4bf07.ttf",
     "static/media/logo.svg": "/GTA/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/GTA/index.html",
-    "main.9a9f4de1.css.map": "/GTA/static/css/main.9a9f4de1.css.map",
-    "main.79eb8e3c.js.map": "/GTA/static/js/main.79eb8e3c.js.map",
+    "main.617e7735.css.map": "/GTA/static/css/main.617e7735.css.map",
+    "main.e6be993e.js.map": "/GTA/static/js/main.e6be993e.js.map",
     "787.39f847e3.chunk.js.map": "/GTA/static/js/787.39f847e3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9a9f4de1.css",
-    "static/js/main.79eb8e3c.js"
+    "static/css/main.617e7735.css",
+    "static/js/main.e6be993e.js"
   ]
 }
